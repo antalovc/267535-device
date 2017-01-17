@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Антон Овчинников](https://up.htmlacademy.ru/htmlcss/16/user/267535).
-* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
+* Наставник: [Антон Попов](https://up.htmlacademy.ru/htmlcss/16/user/78239).
 
 ---
 
