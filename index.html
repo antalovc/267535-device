@@ -15,9 +15,12 @@
 
         <!--Логотип заголовка-->
         <!--ВОПРОС: Картинка или текст?-->
+        <!--ВОПРОС: Ссылка?-->
         <div class="index-logo">
-          <!--TODO: размеры-->
-          <img src="http://placehold.it/160x30" width="160" height="30" alt="Магазин «Device»">
+          <a href="index.html">
+            <!--TODO: размеры-->
+            <img src="http://placehold.it/160x30" width="160" height="30" alt="Магазин «Device»">
+          </a>
         </div>
 
         <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
@@ -73,7 +76,7 @@
           </div>
 
           <div class="content-right">
-            <section class="terms-block">
+            <section class="services-block">
               <a class="delivery" href="#">Доставка</a>
               <a class="guarantee" href="#">Гарантия</a>
             </section>
@@ -137,14 +140,37 @@
           </article>
         </section>
 
-        <!--Секция условия обслуживания-->
-        <section class="index-terms">
+        <!--Секция сервисов-->
+        <section class="index-services">
           <!--TODO-->
-          <ul class="index-terms-list">
-            <li class="index-terms-item">
-              Доставка
-            </li>
-          </ul>
+          <input type="radio" id="btn-1" name="services">
+          <input type="radio" id="btn-2" name="services">
+          <input type="radio" id="btn-3" name="services">
+          <div class="index-services-list">
+            <label for="btn-1">Доставка</label>
+            <label for="btn-2">Гарантия</label>
+            <label for="btn-3">Кредит</label>
+          </div>
+          <div class="index-services-inner">
+              <div class="index-services-slides">
+                <!--TODO: размеры, тексты-->
+                  <article>
+                    <h2>Доставка</h2>
+                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    <img src="http://placehold.it/136x164" width="136" height="164" alt="Доставка">
+                  </article>
+                  <article>
+                    <h2>Гарантия</h2>
+                    <p></p>
+                    <img src="http://placehold.it/136x164" width="136" height="164" alt="Гарантия">
+                  </article>
+                  <article>
+                    <h2>Кредит</h2>
+                    <p></p>
+                    <img src="http://placehold.it/136x164" width="136" height="164" alt="Кредит">
+                  </article>
+              </div>
+          </div>
         </section>
 
         <!--Секция брэндов-->
