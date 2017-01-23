@@ -13,23 +13,73 @@
     <header class="main-header">
       <div class="container">
 
+        <!--Логотип заголовка-->
+        <!--ВОПРОС: Картинка или текст?-->
         <div class="index-logo">
-          <img src="http://placehold.it/368x204" width="368" height="204" alt="Барбершоп «Бородинский»">
+          <!--TODO: размеры-->
+          <img src="http://placehold.it/160x30" width="160" height="30" alt="Магазин «Device»">
         </div>
 
-        <div class="main-user">
+        <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
+        <!--ВОПРОС: Перегружено div'ами? Как еще сгруппировать? Сейчас:
+        2 полосы, в каждой по левому и правому div'у, внутри них - секции.-->
+        <!--ВОПРОС: Форму в div или нормально как отдельная секция?-->
+        <div class="main-tools">
           <div class="content-left">
+            <form class="search-form">
+              <input type="text" name="search" value="" placeholder="Поиск по сайту">
+              <button class="btn" type="submit">Найти</button>
+            </form>
           </div>
 
           <div class="content-right">
+            <section class="user-block">
+              <a class="login" href="#">Вход</a>
+            </section>
+            <section class="purchase-block">
+              <a class="compare" href="#">Сравнить</a>
+              <a class="cart" href="#">Коризина</a>
+            </section>
           </div>
         </div>
 
+        <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
         <div class="main-navigation">
           <div class="content-left">
+            <section class="catalogue-block">
+              <!--ВОПРОС: Ссылка (используем стили)?-->
+              <a class="catalogue" href="#">Каталог товаров</a>
+              <ul class="catalogue-contents">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="#">Фитнесс-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+                <li>
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </section>
           </div>
 
           <div class="content-right">
+            <section class="terms-block">
+              <a class="delivery" href="#">Доставка</a>
+              <a class="guarantee" href="#">Гарантия</a>
+            </section>
+            <section class="contacts-block">
+              <a class="contacts" href="#">Контакты</a>
+            </section>
           </div>
         </div>
 
@@ -37,30 +87,99 @@
     </header>
 
     <main class="container">
+      <div class="container">
 
-      <section class="promo">
-      </section>
+        <!--Промо секция-->
+        <section class="index-promo">
+          <!--TODO-->
+        </section>
 
-      <section class="product-types">
-      </section>
+        <!--Секция миникаталога-->
+        <section class="index-catalogue">
+          <!--ВОПРОС: Сcылку оборачивать в article?-->
+          <!--ВОПРОС: Всу внутри одной ссылки?-->
+          <!--ВОПРОС: Правомерно ли использование b?-->
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Виртуальная реальность">
+              <b>Виртуальная реальность</b>
+            </a>
+          </article>
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Фитнесс-браслеты">
+              <b>Фитнесс-браслеты</b>
+            </a>
+          </article>
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Квадрокоптеры">
+              <b>Квадрокоптеры</b>
+            </a>
+          </article>
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Моноподы для селфи">
+              <b>Моноподы для селфи</b>
+            </a>
+          </article>
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Умные часы">
+              <b>Умные часы</b>
+            </a>
+          </article>
+          <article class="catalogue-division">
+            <a href="#">
+              <img src="http://placehold.it/160x160" width="160" height="160" alt="Экшн-камеры">
+              <b>Экшн-камеры</b>
+            </a>
+          </article>
+        </section>
 
-      <section class="delivery">
-      </section>
+        <!--Секция условия обслуживания-->
+        <section class="index-terms">
+          <!--TODO-->
+          <ul class="index-terms-list">
+            <li class="index-terms-item">
+              Доставка
+            </li>
+          </ul>
+        </section>
 
-      <section class="brands">
-      </section>
+        <!--Секция брэндов-->
+        <section class="index-brands">
+          <!--ВОПРОС: Сcылку оборачивать в article?-->
+          <a href="#">
+              <img src="http://placehold.it/260x100" width="260" height="100" alt="DJI">
+          </a>
+          <a href="#">
+              <img src="http://placehold.it/260x100" width="260" height="100" alt="SP gadgets">
+          </a>
+          <a href="#">
+              <img src="http://placehold.it/260x100" width="260" height="100" alt="GoPro">
+          </a>
+          <a href="#">
+              <img src="http://placehold.it/260x100" width="260" height="100" alt="Vive">
+          </a>
+        </section>
 
-      <div class="info">
-          <section class="content-left">
-          </section>
+        <!--Секция информации-->
+        <div class="index-about">
+            <section class="content-left">
+          <!--TODO-->
+            </section>
 
-          <section class="content-right">
-          </section>
+            <section class="content-right">
+          <!--TODO-->
+            </section>
+        </div>
+
       </div>
-
     </main>
 
     <footer class="main-footer">
+      <!--TODO-->
     </footer>
 
   </body>
