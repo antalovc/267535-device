@@ -21,68 +21,56 @@
 
         <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
         <div class="main-tools">
-          <div class="content-left">
-            <form class="search-form" action="https://echo.htmlacademy.ru">
-              <input type="text" name="search" value="" placeholder="Поиск по сайту">
-              <button class="btn" type="submit">Найти</button>
-            </form>
-          </div>
+          <form class="content-left search-form" action="https://echo.htmlacademy.ru">
+            <input type="text" name="search" value="" placeholder="Поиск по сайту">
+            <button class="btn" type="submit">Найти</button>
+          </form>
 
           <div class="content-right">
-            <section class="user-block">
-              <a class="login" href="#">Войти</a>
-            </section>
-            <section class="purchase-block">
-              <a class="compare" href="#">Сравнить</a>
-              <a class="cart" href="#">Корзина</a>
-            </section>
+            <a class="login" href="#">Войти</a>
+            <a class="compare" href="#">Сравнить</a>
+            <a class="cart" href="#">Корзина</a>
           </div>
         </div>
 
         <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
         <div class="main-navigation">
-          <div class="content-left">
-            <section class="catalogue-block">
-              <!--Закрашивается область поверх-->
-              <span class="title">Каталог товаров</span>
-              <ul class="contents">
-                <li>
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a href="#">Фитнесс-браслеты</a>
-                </li>
-                <li>
-                  <a href="#">Квадрокоптеры</a>
-                </li>
-                <li>
-                  <a href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="#">Умные часы</a>
-                </li>
-                <li>
-                  <a href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-            </section>
-          </div>
+          <section class="content-left catalogue-block">
+            <!--Закрашивается область поверх-->
+            <span class="title">Каталог товаров</span>
+            <ul class="contents">
+              <li>
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="#">Фитнесс-браслеты</a>
+              </li>
+              <li>
+                <a href="#">Квадрокоптеры</a>
+              </li>
+              <li>
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="#">Умные часы</a>
+              </li>
+              <li>
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </section>
 
           <div class="content-right">
-            <section class="services-block">
-              <a class="delivery" href="#">Доставка</a>
-              <a class="guarantee" href="#">Гарантия</a>
-            </section>
-            <section class="contacts-block">
-              <a class="contacts" href="#">Контакты</a>
-            </section>
+            <a href="#">Доставка</a>
+            <a href="#">Гарантия</a>
+            <a class="align-right" href="#">Контакты</a>
           </div>
         </div>
 
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <div class="container">
 
         <!--Промо секция-->
@@ -99,85 +87,79 @@
           <div class="promo-inner">
               <div class="promo-slides">
                 <article class="promo-item">
-                  <a href="#">
-                    <img class="content-left" src="http://placehold.it/384x486" width="384" height="486" alt="Селфи палка">
+                  <img class="content-left" src="http://placehold.it/384x486" width="384" height="486" alt="Селфи палка">
+                  <section class="content-right">
+                    <!--полоса через псевдоэлемент-->
+                    <b class="promo-item-count">01</b>
 
-                    <section class="content-right">
-                      <div class="promo-separator"></div>
-                      <b class="promo-item-count">01</b>
+                    <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
+                    <p>Самая длинна палка для селфи доступна в нашем магазине.
+                      Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-                      <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
-                      <p>Самая длинна палка для селфи доступна в нашем магазине.
-                        Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                    <a class="text-with-bgTODO" href="#">Подробнее</a>
 
-                      <span class="text-with-bgTODO">Подробнее</span>
-
-                      <section class="promo-item-details">
-                        <section class="promo-item-detail">
-                          <span>8,5 м</span>
-                          <small>Длина палки</small>
-                        </section>
-                        <section class="promo-item-detail">
-                          <span>5 кг</span>
-                          <small>Вес палки</small>
-                        </section>
-                        <section class="promo-item-detail">
-                          <span>Карбон</span>
-                          <small>Материал</small>
-                        </section>
+                    <section class="promo-item-details">
+                      <section class="promo-item-detail">
+                        <span>8,5 м</span>
+                        <small>Длина палки</small>
+                      </section>
+                      <section class="promo-item-detail">
+                        <span>5 кг</span>
+                        <small>Вес палки</small>
+                      </section>
+                      <section class="promo-item-detail">
+                        <span>Карбон</span>
+                        <small>Материал</small>
                       </section>
                     </section>
+                  </section>
 
-                  </a>
                 </article>
 
                 <article class="promo-item">
-                  <a href="#">
-                    <img class="content-left" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
+                  <img class="content-left" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
+                  <section class="content-right">
+                    <!--полоса через псевдоэлемент-->
+                    <b class="promo-item-count">02</b>
 
-                    <section class="content-right">
-                      <b class="promo-item-count">02</b>
+                    <h2 class="promo-item-title">Худеем правильно!</h2>
+                    <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 
-                      <h2 class="promo-item-title">Худеем правильно!</h2>
-                      <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                    <a class="text-with-bgTODO" href="#">Подробнее</a>
 
-                      <span class="text-with-bgTODO">Подробнее</span>
-
-                      <section class="promo-item-details">
-                        <section class="promo-item-detail">
-                          <span>48 часов</span>
-                          <small>Без подзарядки</small>
-                        </section>
+                    <section class="promo-item-details">
+                      <section class="promo-item-detail">
+                        <span>48 часов</span>
+                        <small>Без подзарядки</small>
                       </section>
                     </section>
+                  </section>
 
-                  </a>
                 </article>
 
                 <article class="promo-item">
-                  <a href="#">
-                    <img class="content-left" src="http://placehold.it/526x334" width="526" height="334" alt="Селфи палка">
-                    <section class="content-right">
-                      <b class="promo-item-count">03</b>
+                  <img class="content-left" src="http://placehold.it/526x334" width="526" height="334" alt="Селфи палка">
+                  <section class="content-right">
+                    <!--полоса через псевдоэлемент-->
+                    <b class="promo-item-count">03</b>
 
-                      <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
-                      <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                    <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
+                    <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
-                      <span class="text-with-bgTODO">Подробнее</span>
+                    <a class="text-with-bgTODO" href="#">Подробнее</a>
 
-                      <section class="promo-item-details">
-                        <section class="promo-item-detail">
-                          <span>800 м</span>
-                          <small>Дальность полета</small>
-                        </section>
-                        <section class="promo-item-detail">
-                          <span>50 мг</span>
-                          <small>Радиус поражения</small>
-                        </section>
+                    <section class="promo-item-details">
+                      <section class="promo-item-detail">
+                        <span>800 м</span>
+                        <small>Дальность полета</small>
+                      </section>
+                      <section class="promo-item-detail">
+                        <span>50 мг</span>
+                        <small>Радиус поражения</small>
                       </section>
                     </section>
+                  </section>
 
-                  </a>
                 </article>
 
               </div>
@@ -213,9 +195,11 @@
           </a>
         </section>
 
-        <!--Секция сервисов-->
-        <!--ВОПРОС: реализация ширины во всю страницу-->
-        <section class="index-services">
+      </div>
+
+      <!--Секция сервисов-->
+      <div class="container-fullwidth">
+        <section class="container index-services">
           <input type="radio" id="btn-services-1" name="services">
           <input type="radio" id="btn-services-2" name="services">
           <input type="radio" id="btn-services-3" name="services">
@@ -244,6 +228,9 @@
               </div>
           </div>
         </section>
+      </div>
+
+      <div class="container">
 
         <!--Секция брэндов-->
         <section class="index-brands">
@@ -263,7 +250,7 @@
 
         <!--Секция информации-->
         <section class="index-about content-left">
-          <div class="separator"></div>
+          <!--полоса через псевдоэлемент-->
           <h2 class="index-about-title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="company-name">DEVICE</span> работает со многими транспортными компаниями.</p>
@@ -276,7 +263,7 @@
         </section>
 
         <section class="index-contacts content-right">
-          <div class="separator"></div>
+          <!--полоса через псевдоэлемент-->
           <h2 class="index-contacts-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img class="index-contacts-map" src="http://placehold.it/560x222" width="560" height="222" alt="Карта">
@@ -288,60 +275,49 @@
 
     <footer class="main-footer">
       <div class="container">
-        <!--ВОПРОС: Все - секции?-->
-        <!--ВОПРОС: Разметка - дополнительне дивы (вертикальная/горизонтальная разбивка?)?-->
-        <!--ВОПРОС: Ссылка (текущая)?-->
-        
-        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
-        <section class="index-logo">
-          <a href="index.html">
+
+        <div class="column-left">
+          <a class="index-logo" href="index.html">
             <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
           </a>
-        </section>
+          <section class="footer-address">
+            г. Москва, ул. Строителей, 15
+          </section>
+          <!--полоса через псевдоэлемент-->
+        </div>
 
-        <section class="footer-user-purchase">
-          <a class="login" href="#">Войти</a>
-          <a class="compare" href="#">Сравнить</a>
-          <a class="cart" href="#">Корзина</a>
-        </section>
+        <div class="column-center">
+          <section class="footer-services">
+            <a href="#">Доставка</a>
+            <a href="#">Гарантия</a>
+            <a href="#">Контакты</a>
+          </section>
+          <section class="footer-social"><!--3 по 38*38-->
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social-btn social-btn-twit" href="#">Твиттер</a>
+          </section>
+        </div>
 
-        <section class="footer-address">
-          г. Москва, ул. Строителей, 15
-        </section>
+        <div class="column-right">
+          <section class="footer-user-purchase">
+            <a class="login" href="#">Войти</a>
+            <a class="compare" href="#">Сравнить</a>
+            <a class="cart" href="#">Корзина</a>
+          </section>
+          <section class="footer-phone">
+            +7(495)495-95-95
+          </section>
+          <section class="footer-copyright"><!--37*24-->
+            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </section>
+        </div>
 
-        <section class="footer-services">
-          <!--ВОПРОС:Одинковые классы с заголовком-->
-          <a class="delivery" href="#">Доставка</a>
-          <a class="guarantee" href="#">Гарантия</a>
-          <a class="contacts" href="#">Контакты</a>
-        </section>
-
-        <section class="footer-phone">
-          +7(495)495-95-95
-        </section>
-
-        <!--ВОПРОС: Что за?-->
-        <section class="SOMETHING">
-        </section>
-
-        <section class="footer-social"><!--3 по 38*38-->
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-          <a class="social-btn social-btn-twit" href="#">Твиттер</a>
-        </section>
-
-        <section class="footer-copyright"><!--37*24-->
-          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-        </section>
       </div>
     </footer>
+
+    <!--TODO:карта и форма-->
 
   </body>
 </html>
 
-<!--ВОПРОСЫ
-  1. что за плюс у каталога товаров?
-  2. Где размечать форму и карту?
--->
-
-<!--TODO: Добавит полоски-->
