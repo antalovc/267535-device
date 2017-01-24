@@ -12,21 +12,14 @@
 
     <header class="main-header">
       <div class="container">
-        <!--ВОПРОС: Сдвиги относительно - через фоны или через position: relative?-->
 
         <!--Логотип заголовка-->
-        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
-        <!--ВОПРОС: Ссылка (текущая)?-->
-        <div class="index-logo">
-          <a href="index.html">
-            <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
-          </a>
-        </div>
+        <!--позиционирование через position: relative + top, left или margin-->
+        <a href="index.html">
+          <img class="index-logo" src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
+        </a>
 
         <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
-        <!--ВОПРОС: Перегружено div'ами? Как еще сгруппировать? Сейчас:
-        2 полосы, в каждой по левому и правому div'у, внутри них - секции.-->
-        <!--ВОПРОС: Форму в div или нормально как отдельная секция?-->
         <div class="main-tools">
           <div class="content-left">
             <form class="search-form">
@@ -50,9 +43,8 @@
         <div class="main-navigation">
           <div class="content-left">
             <section class="catalogue-block">
-              <!--ВОПРОС: Ссылка (используем стили)?-->
-              <!--ВОПРОС: Как это смещаться должно?-->
-              <a class="catalogue" href="#">Каталог товаров</a>
+              <!--Закрашивается область поверх-->
+              <span class="title">Каталог товаров</span>
               <ul class="catalogue-contents">
                 <li>
                   <a href="#">Виртуальная реальность</a>
@@ -107,7 +99,7 @@
         </li>
       </ul>
 
-        <!--ВОПРОС: реализация ширины во всю страницу-->
+      <!--ВОПРОС: реализация ширины во всю страницу-->
       <article class="catalogue">
         <form class="filter-block" action="https://echo.htmlacademy.ru" method="post">
           <!--ВОПРОС: названия классов?-->
@@ -167,9 +159,8 @@
             <a href="#">
               <img src="http://placehold.it/360x380" width="360" height="380" alt="Любительская селфи-палка">
               <div class="price-box">
-                <!--ВОПРОС: div, b?-->
                 <div class="description">Любительская селфи-палка</div>
-                <b>500 руб.</b>
+                <span>500 руб.</span>
               </div>
             </a>
           </article>
@@ -178,9 +169,8 @@
             <a href="#">
               <img src="http://placehold.it/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="price-box">
-                <!--ВОПРОС: div, b?-->
                 <div class="description">Профессиональная селфи-палка</div>
-                <b>1 500 руб.</b>
+                <span>1 500 руб.</span>
               </div>
             </a>
           </article>
@@ -189,9 +179,8 @@
             <a href="#">
               <img src="http://placehold.it/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="price-box">
-                <!--ВОПРОС: div, b?-->
                 <div class="description">Непотопляемая селфи-палка</div>
-                <b>2 500 руб.</b>
+                <span>2 500 руб.</span>
               </div>
             </a>
           </article>
@@ -199,10 +188,9 @@
           <article class="catalogue-content-item">
             <a href="#">
               <img src="http://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-              <div class="price-box"> 
-                <!--ВОПРОС: div, b?-->
+              <div class="price-box">
                 <div class="description">Селфи-палка «Следуй за мной»</div>
-                <b>4 900 руб.</b>
+                <span>4 900 руб.</span>
               </div>
             </a>
           </article>
