@@ -270,6 +270,13 @@
           <a class="btn" href="#">Напишите нам</a>
         </section>
 
+        <section class="popup-map">
+          <img src="http://placehold.it/960x559" width="960" height="559" alt="Карта">
+          <a href="#">
+            <img src="http://placehold.it/54x54" width="54" height="54" alt="Закрыть">
+          </a>
+        </section>
+
       </div>
     </main>
 
@@ -316,7 +323,20 @@
       </div>
     </footer>
 
-    <!--TODO:карта и форма-->
+    <section class="popup-contact">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="popup-contact-name">Ваше имя:</label>
+        <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
+        <label for="popup-contact-email">Ваш e-mail:</label>
+        <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
+        <label for="popup-contact-text">Текст письма:</label>
+        <textarea id="popup-contact-text" name="text"  rows="6">В свободной форме</textarea>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      <a href="#">
+        <img src="http://placehold.it/54x54" width="54" height="54" alt="Закрыть">
+      </a>
+    </section>
 
   </body>
 </html>

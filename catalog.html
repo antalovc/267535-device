@@ -98,12 +98,12 @@
 
           <form class="filter-block align-right" action="https://echo.htmlacademy.ru" method="post"><!--прижимаем вправо-->
             <h2>Стоимость</h2>
+            <div class="range"><!--через border-left/right (/псевдоэл-т/+div/box-shadow)-->
               <div class="button">&bull;</div>
               <span class="label">от 0</span>
               <div class="button">&bull;</div>
               <span class="label">до 5000</span>
             </div>
-            <input type="range" name="price-range" min="0" max="5000" value="1">
             <h2>Цвет</h2>
             <input type="checkbox" name="black" id="catalogue-filters-black" checked>
             <label for="catalogue-filters-black">Черный</label>
