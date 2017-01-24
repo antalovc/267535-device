@@ -6,17 +6,14 @@
   </head>
 
   <body>
-    <!--
-      <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-    -->
 
     <header class="main-header">
       <div class="container">
 
         <!--Логотип заголовка-->
         <!--позиционирование через position: relative + top, left или margin-->
-        <a href="index.html">
-          <img class="index-logo" src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
+        <a class="logo" href="index.html">
+          <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
         </a>
 
         <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
@@ -38,7 +35,7 @@
         <div class="main-navigation">
           <section class="content-left catalogue-block">
             <!--Закрашивается область поверх-->
-            <span class="title">Каталог товаров</span>
+            <h3>Каталог товаров</h3>
             <ul class="contents">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -97,14 +94,14 @@
           </div>
 
           <form class="filter-block align-right" action="https://echo.htmlacademy.ru" method="post"><!--прижимаем вправо-->
-            <h2>Стоимость</h2>
+            <h3>Стоимость</h3>
             <div class="range"><!--через border-left/right (/псевдоэл-т/+div/box-shadow)-->
               <div class="button">&bull;</div>
               <span class="label">от 0</span>
               <div class="button">&bull;</div>
               <span class="label">до 5000</span>
             </div>
-            <h2>Цвет</h2>
+            <h3>Цвет</h3>
             <input type="checkbox" name="black" id="catalogue-filters-black" checked>
             <label for="catalogue-filters-black">Черный</label>
             <input type="checkbox" name="white" id="catalogue-filters-white">
@@ -115,7 +112,7 @@
             <label for="catalogue-filters-red">Красный</label>
             <input type="checkbox" name="pink" id="catalogue-filters-pink">
             <label for="catalogue-filters-pink">Розовый</label>
-            <h2>Bluetooth</h2>
+            <h3>Bluetooth</h3>
             <input type="radio" name="bluetooth" id="catalogue-filters-shaving" value="yes">
             <label for="catalogue-filters-shaving">Есть</label>
             <input type="radio" name="bluetooth" id="catalogue-filters-care" value="no" checked>
@@ -204,7 +201,7 @@
       <div class="container">
 
         <div class="column-left">
-          <a class="index-logo" href="index.html">
+          <a class="logo" href="index.html">
             <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
           </a>
           <section class="footer-address">
@@ -242,6 +239,8 @@
 
       </div>
     </footer>
+
+    <!--TODO: разобарться с заголовками согласно .psd-->
 
   </body>
 </html>

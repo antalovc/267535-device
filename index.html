@@ -6,17 +6,14 @@
   </head>
 
   <body>
-    <!--
-      <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-    -->
 
     <header class="main-header">
       <div class="container">
 
         <!--Логотип заголовка-->
         <!--позиционирование через position: relative + top, left или margin-->
-        <a href="index.html">
-          <img class="index-logo" src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
+        <a class="logo" href="index.html">
+          <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
         </a>
 
         <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
@@ -37,7 +34,7 @@
         <div class="main-navigation">
           <section class="content-left catalogue-block">
             <!--Закрашивается область поверх-->
-            <span class="title">Каталог товаров</span>
+            <h3>Каталог товаров</h3>
             <ul class="contents">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -85,84 +82,84 @@
             <label for="btn-promo-3"></label>
           </div>
           <div class="promo-inner">
-              <div class="promo-slides">
-                <article class="promo-item">
-                  <img class="content-left" src="http://placehold.it/384x486" width="384" height="486" alt="Селфи палка">
-                  <section class="content-right">
-                    <!--полоса через псевдоэлемент-->
-                    <b class="promo-item-count">01</b>
+            <div class="promo-slides">
+              <article class="promo-item">
+                <img class="content-left" src="http://placehold.it/384x486" width="384" height="486" alt="Селфи палка">
+                <section class="content-right">
+                  <!--полоса через псевдоэлемент-->
+                  <b class="promo-item-count">01</b>
 
-                    <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
-                    <p>Самая длинна палка для селфи доступна в нашем магазине.
-                      Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                  <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
+                  <p>Самая длинна палка для селфи доступна в нашем магазине.
+                    Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-                    <a class="btn" href="#">Подробнее</a>
+                  <a class="btn" href="#">Подробнее</a>
 
-                    <section class="promo-item-details">
-                      <section class="promo-item-detail">
-                        <span>8,5 м</span>
-                        <small>Длина палки</small>
-                      </section>
-                      <section class="promo-item-detail">
-                        <span>5 кг</span>
-                        <small>Вес палки</small>
-                      </section>
-                      <section class="promo-item-detail">
-                        <span>Карбон</span>
-                        <small>Материал</small>
-                      </section>
+                  <section class="promo-item-details">
+                    <section class="promo-item-detail">
+                      <span>8,5 м</span>
+                      <small>Длина палки</small>
+                    </section>
+                    <section class="promo-item-detail">
+                      <span>5 кг</span>
+                      <small>Вес палки</small>
+                    </section>
+                    <section class="promo-item-detail">
+                      <span>Карбон</span>
+                      <small>Материал</small>
                     </section>
                   </section>
+                </section>
 
-                </article>
+              </article>
 
-                <article class="promo-item">
-                  <img class="content-left" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
-                  <section class="content-right">
-                    <!--полоса через псевдоэлемент-->
-                    <b class="promo-item-count">02</b>
+              <article class="promo-item">
+                <img class="content-left" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
+                <section class="content-right">
+                  <!--полоса через псевдоэлемент-->
+                  <b class="promo-item-count">02</b>
 
-                    <h2 class="promo-item-title">Худеем правильно!</h2>
-                    <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                  <h2 class="promo-item-title">Худеем правильно!</h2>
+                  <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 
-                    <a class="btn" href="#">Подробнее</a>
+                  <a class="btn" href="#">Подробнее</a>
 
-                    <section class="promo-item-details">
-                      <section class="promo-item-detail">
-                        <span>48 часов</span>
-                        <small>Без подзарядки</small>
-                      </section>
+                  <section class="promo-item-details">
+                    <section class="promo-item-detail">
+                      <span>48 часов</span>
+                      <small>Без подзарядки</small>
                     </section>
                   </section>
+                </section>
 
-                </article>
+              </article>
 
-                <article class="promo-item">
-                  <img class="content-left" src="http://placehold.it/526x334" width="526" height="334" alt="Селфи палка">
-                  <section class="content-right">
-                    <!--полоса через псевдоэлемент-->
-                    <b class="promo-item-count">03</b>
+              <article class="promo-item">
+                <img class="content-left" src="http://placehold.it/526x334" width="526" height="334" alt="Селфи палка">
+                <section class="content-right">
+                  <!--полоса через псевдоэлемент-->
+                  <b class="promo-item-count">03</b>
 
-                    <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
-                    <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
+                  <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
-                    <a class="btn" href="#">Подробнее</a>
+                  <a class="btn" href="#">Подробнее</a>
 
-                    <section class="promo-item-details">
-                      <section class="promo-item-detail">
-                        <span>800 м</span>
-                        <small>Дальность полета</small>
-                      </section>
-                      <section class="promo-item-detail">
-                        <span>50 мг</span>
-                        <small>Радиус поражения</small>
-                      </section>
+                  <section class="promo-item-details">
+                    <section class="promo-item-detail">
+                      <span>800 м</span>
+                      <small>Дальность полета</small>
+                    </section>
+                    <section class="promo-item-detail">
+                      <span>50 мг</span>
+                      <small>Радиус поражения</small>
                     </section>
                   </section>
+                </section>
 
-                </article>
+              </article>
 
-              </div>
+            </div>
           </div>
 
         </section>
@@ -171,27 +168,27 @@
         <section class="index-catalogue">
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Виртуальная реальность">
-            <h3>Виртуальная реальность</h3>
+            <h4>Виртуальная реальность</h4>
           </a>
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Фитнесс-браслеты">
-            <h3>Фитнесс-браслеты</h3>
+            <h4>Фитнесс-браслеты</h4>
           </a>
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Квадрокоптеры">
-            <h3>Квадрокоптеры</h3>
+            <h4>Квадрокоптеры</h4>
           </a>
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Моноподы для селфи">
-            <h3>Моноподы для селфи</h3>
+            <h4>Моноподы для селфи</h4>
           </a>
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Умные часы">
-            <h3>Умные часы</h3>
+            <h4>Умные часы</h4>
           </a>
           <a class="catalogue-division" href="#">
             <img src="http://placehold.it/160x160" width="160" height="160" alt="Экшн-камеры">
-            <h3>Экшн-камеры</h3>
+            <h4>Экшн-камеры</h4>
           </a>
         </section>
 
@@ -211,17 +208,17 @@
           <div class="index-services-inner">
               <div class="index-services-slides">
                   <article>
-                    <h2>Доставка</h2>
+                    <h3>Доставка</h3>
                     <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                     <img src="http://placehold.it/136x164" width="136" height="164" alt="Доставка">
                   </article>
                   <article>
-                    <h2>Гарантия</h2>
+                    <h3>Гарантия</h3>
                     <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживате, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                     <img src="http://placehold.it/171x195" width="171" height="195" alt="Гарантия">
                   </article>
                   <article>
-                    <h2>Кредит</h2>
+                    <h3>Кредит</h3>
                     <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                     <img src="http://placehold.it/156x188" width="156" height="188" alt="Кредит">
                   </article>
@@ -284,7 +281,7 @@
       <div class="container">
 
         <div class="column-left">
-          <a class="index-logo" href="index.html">
+          <a class="logo" href="index.html">
             <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
           </a>
           <section class="footer-address">
