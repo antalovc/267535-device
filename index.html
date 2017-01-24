@@ -12,9 +12,10 @@
 
     <header class="main-header">
       <div class="container">
+        <!--ВОПРОС: Сдвиги относительно - через фоны или через position: relative?-->
 
         <!--Логотип заголовка-->
-        <!--ВОПРОС: Картинка или текст?-->
+        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
         <!--ВОПРОС: Ссылка (текущая)?-->
         <div class="index-logo">
           <a href="index.html">
@@ -50,6 +51,7 @@
           <div class="content-left">
             <section class="catalogue-block">
               <!--ВОПРОС: Ссылка (используем стили)?-->
+              <!--ВОПРОС: Как это смещаться должно?-->
               <a class="catalogue" href="#">Каталог товаров</a>
               <ul class="catalogue-contents">
                 <li>
@@ -93,18 +95,111 @@
 
         <!--Промо секция-->
         <section class="index-promo">
-          <!--TODO-->
-          <!--ВОПРОС: Цифры - картинки или overflow текст?-->
-          <!--384*486-->
-          <b>Делай селфи, как Бен Стилер!</b>
-          <p>Самая длинна палка для селфи доступна в нашем магазине. <!--перенос-->
-            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <!--345*485-->
-          <b>Худеем правильно!</b>
-          <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <!--526*334-->
-          <b>Порхает как бабока, жалит как пчела!</b>
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+
+          <!--ВОПРОС: Положение radiobutton'ов вне правой половины?-->
+          <input type="radio" id="btn-promo-1" name="services">
+          <input type="radio" id="btn-promo-2" name="services">
+          <input type="radio" id="btn-promo-3" name="services">
+          <div class="promo-list">
+            <label for="btn-promo-1"></label>
+            <label for="btn-promo-2"></label>
+            <label for="btn-promo-3"></label>
+          </div>
+          <div class="promo-inner">
+              <div class="promo-slides">
+                <article class="promo-item">
+                  <a href="#">
+                    <!--ВОПРОС: Content-left/right?-->
+                    <!--ВОПРОС: Цифры - картинки или overflow текст?-->
+                    <!--TODO добавить цифры/картинки:-->
+                    <img class="content-left" src="http://placehold.it/384x486" width="384" height="486" alt="Селфи палка">
+
+                    <section class="content-right">
+                      <!--ВОПРОС: h2?-->
+                      <b class="promo-item-title">Делай селфи, как Бен Стилер!</b>
+                      <!--ВОПРОС: перенос в строке?-->
+                      <p>Самая длинна палка для селфи доступна в нашем магазине.
+                        Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                      <!--ВОПРОС: h2?-->
+                      <b class="text-with-bgTODO">Подробнее</b>
+
+                      <section class="promo-item-details">
+                        <!--ВОПРОС: b? b?-->
+                        <section class="promo-item-detail">
+                          <b>8,5 м</b>
+                          <b>Длина палки</b>
+                        </section>
+                        <section class="promo-item-detail">
+                          <b>5 кг</b>
+                          <b>Вес палки</b>
+                        </section>
+                        <section class="promo-item-detail">
+                          <b>Карбон</b>
+                          <b>Материал</b>
+                        </section>
+                      </section>
+                    </section>
+
+                  </a>
+                </article>
+
+                <article class="promo-item">
+                  <a href="#">
+                    <!--ВОПРОС: Content-left/right?-->
+                    <img class="content-left" src="http://placehold.it/345x485" width="345" height="485" alt="Селфи палка">
+
+                    <section class="content-right">
+                      <!--ВОПРОС: h2?-->
+                      <b class="promo-item-title">Худеем правильно!</b>
+                      <!--ВОПРОС: перенос в строке?-->
+                      <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                      <!--ВОПРОС: h2?-->
+                      <b class="text-with-bgTODO">Подробнее</b>
+
+                      <section class="promo-item-details">
+                        <!--ВОПРОС: b? b?-->
+                        <section class="promo-item-detail">
+                          <b>48 часов</b>
+                          <b>Без подзарядки</b>
+                        </section>
+                      </section>
+                    </section>
+
+                  </a>
+                </article>
+
+                <article class="promo-item">
+                  <a href="#">
+                    <!--ВОПРОС: Content-left/right?-->
+                    <img class="content-left" src="http://placehold.it/526x334" width="526" height="334" alt="Селфи палка">
+
+                    <section class="content-right">
+                      <!--ВОПРОС: h2?-->
+                      <b class="promo-item-title">Порхает как бабока, жалит как пчела!</b>
+                      <!--ВОПРОС: перенос в строке?-->
+                      <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                      <!--ВОПРОС: h2?-->
+                      <b class="text-with-bgTODO">Подробнее</b>
+
+                      <section class="promo-item-details">
+                        <!--ВОПРОС: b? b?-->
+                        <section class="promo-item-detail">
+                          <b>800 м</b>
+                          <b>Дальность полета</b>
+                        </section>
+                        <section class="promo-item-detail">
+                          <b>50 мг</b>
+                          <b>Радиус поражения</b>
+                        </section>
+                      </section>
+                    </section>
+
+                  </a>
+                </article>
+
+              </div>
+          </div>
+
         </section>
 
         <!--Секция миникаталога-->
@@ -151,15 +246,15 @@
         </section>
 
         <!--Секция сервисов-->
+        <!--ВОПРОС: реализация ширины во всю страницу-->
         <section class="index-services">
-          <!--TODO-->
-          <input type="radio" id="btn-1" name="services">
-          <input type="radio" id="btn-2" name="services">
-          <input type="radio" id="btn-3" name="services">
+          <input type="radio" id="btn-services-1" name="services">
+          <input type="radio" id="btn-services-2" name="services">
+          <input type="radio" id="btn-services-3" name="services">
           <div class="index-services-list">
-            <label for="btn-1">Доставка</label>
-            <label for="btn-2">Гарантия</label>
-            <label for="btn-3">Кредит</label>
+            <label class="btn-services-1 text-with-bgTODO">Доставка</label>
+            <label class="btn-services-2 text-with-bgTODO">Гарантия</label>
+            <label class="btn-services-3 text-with-bgTODO">Кредит</label>
           </div>
           <div class="index-services-inner">
               <div class="index-services-slides">
@@ -200,26 +295,37 @@
         </section>
 
         <!--Секция информации-->
-        <div class="index-about">
-            <section class="content-left">
-          <!--TODO-->
-            </section>
+        <section class="index-about content-left">
+          <!--ВОПРОС: Как делать полоски, картинкой? Тогда везде картинкой?-->
+          <h2 class="index-about-title">О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="company-name">DEVICE</span> работает со многими транспортными компаниями.</p>
+          <ul class="index-about-partners">
+            <li>Деловые Линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="text-with-bgTODO" href="#">Подробнее о нас</a>
+        </section>
 
-            <section class="content-right">
-          <!--TODO-->
-          <!--560*222-->
-            </section>
-        </div>
+        <section class="index-contacts content-right">
+          <!--ВОПРОС: Как делать полоски, картинкой? Тогда везде картинкой?-->
+          <h2 class="index-contacts-title">Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <img class="index-contacts-map" src="http://placehold.it/560x222" width="560" height="222" alt="Карта"></img>
+          <a class="text-with-bgTODO" href="#">Напишите нам</a>
+        </section>
 
       </div>
     </main>
 
     <footer class="main-footer">
       <div class="container">
-        <!--TODO-->
         <!--ВОПРОС: Все - секции?-->
         <!--ВОПРОС: Разметка - дополнительне дивы (вертикальная/горизонтальная разбивка?)?-->
         <!--ВОПРОС: Ссылка (текущая)?-->
+        
+        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
         <section class="index-logo">
           <a href="index.html">
             <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
@@ -266,8 +372,7 @@
   </body>
 </html>
 
-<!--
-  1. ЛОго - текст или картинка?
-  2. что за плюс у каталога товаров?
-  
+<!--ВОПРОСЫ
+  1. что за плюс у каталога товаров?
+  2. Где размечать форму и карту?
 -->

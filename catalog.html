@@ -6,6 +6,270 @@
   </head>
 
   <body>
-    <!--размеры  изображений каталога 360*380-->
+    <!--
+      <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    -->
+
+    <header class="main-header">
+      <div class="container">
+        <!--ВОПРОС: Сдвиги относительно - через фоны или через position: relative?-->
+
+        <!--Логотип заголовка-->
+        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
+        <!--ВОПРОС: Ссылка (текущая)?-->
+        <div class="index-logo">
+          <a href="index.html">
+            <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
+          </a>
+        </div>
+
+        <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
+        <!--ВОПРОС: Перегружено div'ами? Как еще сгруппировать? Сейчас:
+        2 полосы, в каждой по левому и правому div'у, внутри них - секции.-->
+        <!--ВОПРОС: Форму в div или нормально как отдельная секция?-->
+        <div class="main-tools">
+          <div class="content-left">
+            <form class="search-form">
+              <input type="text" name="search" value="" placeholder="Поиск по сайту">
+              <button class="btn" type="submit">Найти</button>
+            </form>
+          </div>
+
+          <div class="content-right">
+            <section class="user-block">
+              <a class="login" href="#">Войти</a>
+            </section>
+            <section class="purchase-block">
+              <a class="compare" href="#">Сравнить</a>
+              <a class="cart" href="#">Корзина</a>
+            </section>
+          </div>
+        </div>
+
+        <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
+        <div class="main-navigation">
+          <div class="content-left">
+            <section class="catalogue-block">
+              <!--ВОПРОС: Ссылка (используем стили)?-->
+              <!--ВОПРОС: Как это смещаться должно?-->
+              <a class="catalogue" href="#">Каталог товаров</a>
+              <ul class="catalogue-contents">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="#">Фитнесс-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+                <li>
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="content-right">
+            <section class="services-block">
+              <a class="delivery" href="#">Доставка</a>
+              <a class="guarantee" href="#">Гарантия</a>
+            </section>
+            <section class="contacts-block">
+              <a class="contacts" href="#">Контакты</a>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="container">
+
+      <h1>Моноподы для селфи</h1>
+
+      <ul class="breacdrumbs">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li>
+          Моноподы для селфи
+        </li>
+      </ul>
+
+        <!--ВОПРОС: реализация ширины во всю страницу-->
+      <article class="catalogue">
+        <form class="filter-block" action="https://echo.htmlacademy.ru" method="post">
+          <!--ВОПРОС: названия классов?-->
+          <div class="filter-heading">
+            <h2>Фильтр:</h2>
+          </div>
+
+          <h2>Стоимость</h2>
+          <!--ВОПРОС: слайдер с двумя?-->
+          <!--TODO slider-->
+          <input type="range" name="price-range" min="0" max="5000" value="1">
+
+          <h2>Цвет</h2>
+          <input type="checkbox" name="black" id="catalogue-filters-black" checked>
+          <label for="catalogue-filters-black">Черный</label>
+          <input type="checkbox" name="white" id="catalogue-filters-white">
+          <label for="catalogue-filters-white">Белый</label>
+          <input type="checkbox" name="blue" id="catalogue-filters-blue" checked>
+          <label for="catalogue-filters-blue">Синий</label>
+          <input type="checkbox" name="red" id="catalogue-filters-red" checked>
+          <label for="catalogue-filters-red">Красный</label>
+          <input type="checkbox" name="pink" id="catalogue-filters-pink">
+          <label for="catalogue-filters-pink">Розовый</label>
+
+          <h2>Bluetooth</h2>
+          <input type="radio" name="bluetooth" id="catalogue-filters-shaving" value="yes">
+          <label for="catalogue-filters-shaving">Есть</label>
+          <input type="radio" name="bluetooth" id="catalogue-filters-care" value="no" checked>
+          <label for="catalogue-filters-care">нет</label>
+
+          <!--Вопрос: так или через label для кнопки?-->
+          <button class="btn text-with-bgTODO" type="submit">Показать</button>
+        </form>
+
+        <section class="sorting-block">
+          <h2>Сортировка:</h2>
+          <ul class="sorting-types">
+            <li>
+              <a href="#">По цене</a>
+            </li>
+            <li>
+              <a href="#">По типу</a>
+            </li>
+            <li>
+              <a href="#">По популярности</a>
+            </li>
+          </ul>
+          <!--ВОПРОС: div, не ul?-->
+          <div class="sorting-orders">
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <article class="catalogue-content-item">
+            <a href="#">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Любительская селфи-палка">
+              <div class="price-box">
+                <!--ВОПРОС: div, b?-->
+                <div class="description">Любительская селфи-палка</div>
+                <b>500 руб.</b>
+              </div>
+            </a>
+          </article>
+
+          <article class="catalogue-content-item">
+            <a href="#">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
+              <div class="price-box">
+                <!--ВОПРОС: div, b?-->
+                <div class="description">Профессиональная селфи-палка</div>
+                <b>1 500 руб.</b>
+              </div>
+            </a>
+          </article>
+
+          <article class="catalogue-content-item">
+            <a href="#">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <div class="price-box">
+                <!--ВОПРОС: div, b?-->
+                <div class="description">Непотопляемая селфи-палка</div>
+                <b>2 500 руб.</b>
+              </div>
+            </a>
+          </article>
+
+          <article class="catalogue-content-item">
+            <a href="#">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <div class="price-box"> 
+                <!--ВОПРОС: div, b?-->
+                <div class="description">Селфи-палка «Следуй за мной»</div>
+                <b>4 900 руб.</b>
+              </div>
+            </a>
+          </article>
+        </section>
+
+        <section class="pages-block">
+          <a class="prev" href="#">Назад</a>
+          <span>1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a class="next" href="#">Вперёд</a>
+        </section>
+
+      </article>
+
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <!--ВОПРОС: Все - секции?-->
+        <!--ВОПРОС: Разметка - дополнительне дивы (вертикальная/горизонтальная разбивка?)?-->
+        <!--ВОПРОС: Ссылка (текущая)?-->
+        
+        <!--ВОПРОС: Картинка или текст? (вебинар: картинка)-->
+        <section class="index-logo">
+          <a href="index.html">
+            <img src="http://placehold.it/164x36" width="164" height="36" alt="Магазин «Device»">
+          </a>
+        </section>
+
+        <section class="footer-user-purchase">
+          <a class="login" href="#">Войти</a>
+          <a class="compare" href="#">Сравнить</a>
+          <a class="cart" href="#">Корзина</a>
+        </section>
+
+        <section class="footer-address">
+          г. Москва, ул. Строителей, 15
+        </section>
+
+        <section class="footer-services">
+          <!--ВОПРОС:Одинковые классы с заголовком-->
+          <a class="delivery" href="#">Доставка</a>
+          <a class="guarantee" href="#">Гарантия</a>
+          <a class="contacts" href="#">Контакты</a>
+        </section>
+
+        <section class="footer-phone">
+          +7(495)495-95-95
+        </section>
+
+        <!--ВОПРОС: Что за?-->
+        <section class="SOMETHING">
+        </section>
+
+        <section class="footer-social"><!--3 по 38*38-->
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn social-btn-twit" href="#">Твиттер</a>
+        </section>
+
+        <section class="footer-copyright"><!--37*24-->
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </section>
+      </div>
+    </footer>
+
   </body>
 </html>
