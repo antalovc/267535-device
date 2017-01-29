@@ -1,0 +1,24 @@
+body {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 2;
+  color: #464646;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-weight: 800; /*Extra Bold*/
+  font-size: 47px;
+  line-height: 1.2;
+  color: black;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-weight: 800; /*Extra Bold*/
+  font-size: 47px;
+  line-height: 1.2;
+  color: black;
+  letter-spacing: 0.01em;
+}
