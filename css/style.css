@@ -1,3 +1,5 @@
+/*Вопрос:Неймспейсы*/
+
 body {
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: normal;
@@ -21,4 +23,131 @@ h2 {
   line-height: 1.2;
   color: black;
   letter-spacing: 0.01em;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.container-fullwidth {
+  width: 100%;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /*ВОПРОС: норм?*/
+  margin-top: 40px;
+
+  background-color: #f7e296;
+}
+
+.header-logo {
+  position: absolute;
+}
+
+.header-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.header-tools {
+
+}
+ 
+.header-navigation {
+
+}
+
+.header-bottom {
+
+}
+
+.content-left {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+
+}
+
+.content-right {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.header-tools .login {
+  margin-right: auto;
+}
+
+.header-navigation .contacts {
+  margin-left: auto;
+}
+
+
+/*==========================*/
+
+.promo-slides {
+  width: 300%;
+}
+
+.promo-slides .promo-item {
+    display: flex;
+    float: left;
+    width: 1160px;
+}
+
+.promo-inner {
+  overflow: hidden;
+}
+
+/*==========================*/
+
+.index-catalogue {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 186px;
+}
+
+.catalogue-division img{
+  background-color: #f7e296;
+  margin-bottom: 37px;
+}
+
+.catalogue-division h4{
+  margin: 0;
+}
+
+/*==========================*/
+.index-services {
+  margin-bottom: 94px;
+}
+
+.index-services-content {
+  position: relative;/*Вопрос: норм?*/
+}
+
+.index-services-slides {/*Вертикальная анимация - вертикальны скроллер?*/
+  width: 300%;
+}
+
+.index-services-slides article { /*Вопрос: норм или лучше классы для понятности?*/
+    display: flex;
+    float: left;
+    width: 860px;
+}
+
+.index-services-inner {
+  overflow: hidden;
+}
+
+
+/*==========================*/
+.index-brands {
+  display: flex;
+  justify-content: space-between;
 }

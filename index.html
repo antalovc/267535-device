@@ -8,200 +8,204 @@
 
   <body>
 
-    <header class="main-header">
-      <div class="container">
+    <header class="main-header container">
 
-        <!--Логотип заголовка-->
-        <!--позиционирование через position: relative + top, left или margin-->
-        <a class="logo">
-          <img src="img/logo-dark.svg" width="164" height="36" alt="Магазин «Device»">
-        </a>
+      <!--Логотип заголовка-->
+      <!--позиционирование через position: relative + top, left или margin-->
+      <a class="header-logo">
+        <img src="img/logo-dark.svg" width="164" height="36" alt="Магазин «Device»">
+      </a>
 
-        <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
-        <div class="main-tools">
-          <form class="content-left search-form" action="https://echo.htmlacademy.ru">
-            <input type="text" name="search" value="" placeholder="Поиск по сайту">
-            <button class="btn" type="submit">Найти</button>
-          </form>
+      <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
+      <div class="header-tools header-line">
+        <form class="content-left search-form" action="https://echo.htmlacademy.ru">
+          <input type="text" name="search" value="" placeholder="Поиск по сайту">
+          <button class="btn" type="submit">Найти</button>
+        </form>
 
-          <div class="content-right">
-            <a class="login" href="#">Войти</a>
-            <a class="compare" href="#">Сравнить</a>
-            <a class="cart" href="#">Корзина</a>
-          </div>
+        <div class="content-right">
+          <a class="login" href="#">Войти</a>
+          <a class="compare" href="#">Сравнить</a>
+          <a class="cart" href="#">Корзина</a>
         </div>
-
-        <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
-        <div class="main-navigation">
-          <section class="content-left catalogue-block">
-            <!--Закрашивается область поверх-->
-            <h3>Каталог товаров</h3>
-            <ul class="contents">
-              <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Фитнесс-браслеты</a>
-              </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-          </section>
-
-          <div class="content-right">
-            <a href="#">Доставка</a>
-            <a href="#">Гарантия</a>
-            <a class="align-right" href="#">Контакты</a>
-          </div>
-        </div>
-
-        <!--ВОПРОС: Как тут быть?-->
-        <div class="main-navigation">
-          <div class="content-right">
-            <!--полоса через псевдоэлемент?-->
-          </div>
-        </div>
-
       </div>
+
+      <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
+      <div class="header-navigation header-line">
+        <section class="content-left catalogue-block">
+          <!--Закрашивается область поверх-->
+
+          <!--Вопрос: высота заголовка задется в том числе и списком, т е список вниутри него.
+          Как тогда задать ему z-index? Или z-index задается у скроллера? Но как писать селектор?
+          Или размещать отдельно? Отдельно от заголовка?-->
+          <h3>Каталог товаров</h3>
+          <ul class="contents">
+            <!--Вопрос: стилизация переносов?
+            1.2.3/4.5/6:
+            -->
+            <li>
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="#">Фитнесс-браслеты</a>
+            </li>
+            <li>
+              <a href="#">Квадрокоптеры</a>
+            </li>
+            <li>
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="#">Умные часы</a>
+            </li>
+            <li>
+              <a href="#">Экшн-камеры</a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="content-right">
+          <a class="delivery"  href="#">Доставка</a>
+          <a class="warranty"  href="#">Гарантия</a>
+          <a class="contacts" href="#">Контакты</a>
+        </div>
+      </div>
+
+      <!--ВОПРОС: Как тут быть?-->
+      <div class="header-bottom header-line">
+        <div class="content-right">
+          <!--полоса через псевдоэлемент?
+          лучше фон наверное-->
+        </div>
+      </div>
+
     </header>
 
     <main>
-      <div class="container">
 
-        <!--Промо секция-->
-        <section class="index-promo">
+      <!--Промо секция-->
+      <section class="index-promo container">
 
-          <input type="radio" id="btn-promo-1" name="services">
-          <input type="radio" id="btn-promo-2" name="services">
-          <input type="radio" id="btn-promo-3" name="services">
-          <div class="promo-list">
-            <label for="btn-promo-1"></label>
-            <label for="btn-promo-2"></label>
-            <label for="btn-promo-3"></label>
+        <input type="radio" id="btn-promo-1" name="services">
+        <input type="radio" id="btn-promo-2" name="services">
+        <input type="radio" id="btn-promo-3" name="services">
+        <div class="promo-list">
+          <label for="btn-promo-1"></label>
+          <label for="btn-promo-2"></label>
+          <label for="btn-promo-3"></label>
+        </div>
+
+        <div class="promo-inner">
+          <div class="promo-slides">
+            <article class="promo-item">
+              <img class="content-left" src="img/promo-1.png" width="560" height="497" alt="Селфи палка">
+              <section class="content-right">
+                <b class="promo-item-count">01</b>
+
+                <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
+                <p>Самая длинна палка для селфи доступна в нашем магазине.
+                  Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+
+                <a class="btn" href="#">Подробнее</a>
+
+                <section class="promo-item-details">
+                  <section class="promo-item-detail">
+                    <span>8,5 м</span>
+                    <small>Длина палки</small>
+                  </section>
+                  <section class="promo-item-detail">
+                    <span>5 кг</span>
+                    <small>Вес палки</small>
+                  </section>
+                  <section class="promo-item-detail">
+                    <span>Карбон</span>
+                    <small>Материал</small>
+                  </section>
+                </section>
+              </section>
+
+            </article>
+
+            <article class="promo-item">
+              <img class="content-left" src="img/promo-2.png" width="560" height="497" alt="Селфи палка">
+              <section class="content-right">
+                <b class="promo-item-count">02</b>
+
+                <h2 class="promo-item-title">Худеем правильно!</h2>
+                <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+
+                <a class="btn" href="#">Подробнее</a>
+
+                <section class="promo-item-details">
+                  <section class="promo-item-detail">
+                    <span>48 часов</span>
+                    <small>Без подзарядки</small>
+                  </section>
+                </section>
+              </section>
+
+            </article>
+
+            <article class="promo-item">
+              <img class="content-left" src="img/promo-3.png" width="560" height="497" alt="Селфи палка">
+              <section class="content-right">
+                <b class="promo-item-count">03</b>
+
+                <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
+                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+
+                <a class="btn" href="#">Подробнее</a>
+
+                <section class="promo-item-details">
+                  <section class="promo-item-detail">
+                    <span>800 м</span>
+                    <small>Дальность полета</small>
+                  </section>
+                  <section class="promo-item-detail">
+                    <span>50 мг</span>
+                    <small>Радиус поражения</small>
+                  </section>
+                </section>
+              </section>
+
+            </article>
+
           </div>
-          <div class="promo-inner">
-            <div class="promo-slides">
-              <article class="promo-item">
-                <img class="content-left" src="img/promo-1.png" width="560" height="497" alt="Селфи палка">
-                <section class="content-right">
-                  <b class="promo-item-count">01</b>
+        </div>
 
-                  <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
-                  <p>Самая длинна палка для селфи доступна в нашем магазине.
-                    Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+      </section>
 
-                  <a class="btn" href="#">Подробнее</a>
-
-                  <section class="promo-item-details">
-                    <section class="promo-item-detail">
-                      <span>8,5 м</span>
-                      <small>Длина палки</small>
-                    </section>
-                    <section class="promo-item-detail">
-                      <span>5 кг</span>
-                      <small>Вес палки</small>
-                    </section>
-                    <section class="promo-item-detail">
-                      <span>Карбон</span>
-                      <small>Материал</small>
-                    </section>
-                  </section>
-                </section>
-
-              </article>
-
-              <article class="promo-item">
-                <img class="content-left" src="img/promo-2.png" width="560" height="497" alt="Селфи палка">
-                <section class="content-right">
-                  <b class="promo-item-count">02</b>
-
-                  <h2 class="promo-item-title">Худеем правильно!</h2>
-                  <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-
-                  <a class="btn" href="#">Подробнее</a>
-
-                  <section class="promo-item-details">
-                    <section class="promo-item-detail">
-                      <span>48 часов</span>
-                      <small>Без подзарядки</small>
-                    </section>
-                  </section>
-                </section>
-
-              </article>
-
-              <article class="promo-item">
-                <img class="content-left" src="img/promo-3.png" width="560" height="497" alt="Селфи палка">
-                <section class="content-right">
-                  <b class="promo-item-count">03</b>
-
-                  <h2 class="promo-item-title">Порхает как бабока, жалит как пчела!</h2>
-                  <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-
-                  <a class="btn" href="#">Подробнее</a>
-
-                  <section class="promo-item-details">
-                    <section class="promo-item-detail">
-                      <span>800 м</span>
-                      <small>Дальность полета</small>
-                    </section>
-                    <section class="promo-item-detail">
-                      <span>50 мг</span>
-                      <small>Радиус поражения</small>
-                    </section>
-                  </section>
-                </section>
-
-              </article>
-
-            </div>
-          </div>
-
-        </section>
-
-        <!--Секция миникаталога-->
-        <section class="index-catalogue">
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-1.png" width="160" height="160" alt="Виртуальная реальность">
-            <h4>Виртуальная реальность</h4>
-          </a>
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-2.png" width="160" height="160" alt="Моноподы для селфи">
-            <h4>Моноподы для селфи</h4>
-          </a>
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-3.png" width="160" height="160" alt="Экшн-камеры">
-            <h4>Экшн-камеры</h4>
-          </a>
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-4.png" width="160" height="160" alt="Фитнесс-браслеты">
-            <h4>Фитнесс-браслеты</h4>
-          </a>
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-5.png" width="160" height="160" alt="Умные часы">
-            <h4>Умные часы</h4>
-          </a>
-          <a class="catalogue-division" href="#">
-            <img src="img/product-type-6.png" width="160" height="160" alt="Квадрокоптеры">
-            <h4>Квадрокоптеры</h4>
-          </a>
-        </section>
-
-      </div>
+      <!--Секция миникаталога-->
+      <section class="index-catalogue container">
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-1.png" width="160" height="160" alt="Виртуальная реальность">
+          <h4>Виртуальная реальность</h4>
+        </a>
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-2.png" width="160" height="160" alt="Моноподы для селфи">
+          <h4>Моноподы для селфи</h4>
+        </a>
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-3.png" width="160" height="160" alt="Экшн-камеры">
+          <h4>Экшн-камеры</h4>
+        </a>
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-4.png" width="160" height="160" alt="Фитнесс-браслеты">
+          <h4>Фитнесс-браслеты</h4>
+        </a>
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-5.png" width="160" height="160" alt="Умные часы">
+          <h4>Умные часы</h4>
+        </a>
+        <a class="catalogue-division" href="#">
+          <img src="img/product-type-6.png" width="160" height="160" alt="Квадрокоптеры">
+          <h4>Квадрокоптеры</h4>
+        </a>
+      </section>
 
       <!--Секция сервисов-->
-      <div class="container-fullwidth">
-        <section class="container index-services">
+      <div class="index-services container-fullwidth">
+        <section class="index-services-content container">
           <input type="radio" id="btn-services-1" name="services">
           <input type="radio" id="btn-services-2" name="services">
           <input type="radio" id="btn-services-3" name="services">
@@ -232,24 +236,23 @@
         </section>
       </div>
 
+      <!--Секция брэндов-->
+      <section class="index-brands container">
+        <a href="#">
+            <img src="img/logo-brand-1.png" width="260" height="100" alt="DJI">
+        </a>
+        <a href="#">
+            <img src="img/logo-brand-2.png" width="260" height="100" alt="SP gadgets">
+        </a>
+        <a href="#">
+            <img src="img/logo-brand-3.png" width="260" height="100" alt="GoPro">
+        </a>
+        <a href="#">
+            <img src="img/logo-brand-4.png" width="260" height="100" alt="Vive">
+        </a>
+      </section>
+
       <div class="container">
-
-        <!--Секция брэндов-->
-        <section class="index-brands">
-          <a href="#">
-              <img src="img/logo-brand-1.png" width="260" height="100" alt="DJI">
-          </a>
-          <a href="#">
-              <img src="img/logo-brand-2.png" width="260" height="100" alt="SP gadgets">
-          </a>
-          <a href="#">
-              <img src="img/logo-brand-3.png" width="260" height="100" alt="GoPro">
-          </a>
-          <a href="#">
-              <img src="img/logo-brand-4.png" width="260" height="100" alt="Vive">
-          </a>
-        </section>
-
         <!--Секция информации-->
         <section class="index-about content-left">
           <!--полоса через псевдоэлемент-->
@@ -286,7 +289,7 @@
       <div class="container">
 
         <div class="column-left">
-          <a class="logo" href="index.html">
+          <a class="footer-logo" href="index.html">
             <img src="img/logo-light.svg" width="164" height="36" alt="Магазин «Device»">
           </a>
           <section class="footer-address">
@@ -297,9 +300,9 @@
 
         <div class="column-center">
           <section class="footer-services">
-            <a href="#">Доставка</a>
-            <a href="#">Гарантия</a>
-            <a href="#">Контакты</a>
+            <a class="delivery" href="#">Доставка</a>
+            <a class="warranty" href="#">Гарантия</a>
+            <a class="contacts" href="#">Контакты</a>
           </section>
           <section class="footer-social"><!--3 по 38*38-->
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
