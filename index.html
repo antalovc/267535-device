@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -12,12 +13,12 @@
 
       <!--Логотип заголовка-->
       <!--позиционирование через position: relative + top, left или margin-->
-      <a class="header-logo">
+      <a class="logo">
         <img src="img/logo-dark.svg" width="164" height="36" alt="Магазин «Device»">
       </a>
 
       <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
-      <div class="header-tools header-line">
+      <div class="header-tools content-line">
         <form class="content-left search-form" action="https://echo.htmlacademy.ru">
           <input type="text" name="search" value="" placeholder="Поиск по сайту">
           <button class="btn" type="submit">Найти</button>
@@ -31,38 +32,11 @@
       </div>
 
       <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
-      <div class="header-navigation header-line">
-        <section class="content-left catalogue-block">
-          <!--Закрашивается область поверх-->
-
-          <!--Вопрос: высота заголовка задется в том числе и списком, т е список вниутри него.
-          Как тогда задать ему z-index? Или z-index задается у скроллера? Но как писать селектор?
-          Или размещать отдельно? Отдельно от заголовка?-->
-          <h3>Каталог товаров</h3>
-          <ul class="contents">
-            <!--Вопрос: стилизация переносов?
-            1.2.3/4.5/6:
-            -->
-            <li>
-              <a href="#">Виртуальная реальность</a>
-            </li>
-            <li>
-              <a href="#">Фитнесс-браслеты</a>
-            </li>
-            <li>
-              <a href="#">Квадрокоптеры</a>
-            </li>
-            <li>
-              <a href="#">Моноподы для селфи</a>
-            </li>
-            <li>
-              <a href="#">Умные часы</a>
-            </li>
-            <li>
-              <a href="#">Экшн-камеры</a>
-            </li>
-          </ul>
-        </section>
+      <div class="header-navigation content-line">
+        <div class="content-left">
+          <!--TODO плюсик-->
+          <a class="catalog"  href="#">Каталог товаров</a>
+        </div>
 
         <div class="content-right">
           <a class="delivery"  href="#">Доставка</a>
@@ -71,11 +45,38 @@
         </div>
       </div>
 
-      <!--ВОПРОС: Как тут быть?-->
-      <div class="header-bottom header-line">
+      <ul class="header-catalog-contents">
+        <!--Вопрос: высота заголовка задется в том числе и списком, т е список вниутри него.
+        Как тогда задать ему z-index? Или z-index задается у скроллера? Но как писать селектор?
+        Или размещать отдельно? Отдельно от заголовка?-->
+        <!--Вопрос: стилизация переносов?
+        1.2.3/4.5/6:
+        -->
+        <li>
+          <a href="#">Виртуальная реальность</a>
+        </li>
+        <li>
+          <a href="#">Фитнесс-браслеты</a>
+        </li>
+        <li>
+          <a href="#">Квадрокоптеры</a>
+        </li>
+        <li>
+          <a href="#">Моноподы для селфи</a>
+        </li>
+        <li>
+          <a href="#">Умные часы</a>
+        </li>
+        <li>
+          <a href="#">Экшн-камеры</a>
+        </li>
+      </ul>
+
+      <div class="header-bottom-index content-line">
         <div class="content-right">
-          <!--полоса через псевдоэлемент?
-          лучше фон наверное-->
+          <!--Вопрос: полоса через псевдоэлемент с пустым содержимым и отступами?
+          лучше фон наверное?
+          Или вставить сюда промо-блок?-->
         </div>
       </div>
 
@@ -89,7 +90,7 @@
         <input type="radio" id="btn-promo-1" name="services">
         <input type="radio" id="btn-promo-2" name="services">
         <input type="radio" id="btn-promo-3" name="services">
-        <div class="promo-list">
+        <div class="promo-controls">
           <label for="btn-promo-1"></label>
           <label for="btn-promo-2"></label>
           <label for="btn-promo-3"></label>
@@ -102,6 +103,7 @@
               <section class="content-right">
                 <b class="promo-item-count">01</b>
 
+                <!--Вопрос: как делать перенос тайтла?-->
                 <h2 class="promo-item-title">Делай селфи, как Бен Стилер!</h2>
                 <p>Самая длинна палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
@@ -176,28 +178,28 @@
       </section>
 
       <!--Секция миникаталога-->
-      <section class="index-catalogue container">
-        <a class="catalogue-division" href="#">
+      <section class="index-catalog container">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-1.png" width="160" height="160" alt="Виртуальная реальность">
           <h4>Виртуальная реальность</h4>
         </a>
-        <a class="catalogue-division" href="#">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-2.png" width="160" height="160" alt="Моноподы для селфи">
           <h4>Моноподы для селфи</h4>
         </a>
-        <a class="catalogue-division" href="#">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-3.png" width="160" height="160" alt="Экшн-камеры">
           <h4>Экшн-камеры</h4>
         </a>
-        <a class="catalogue-division" href="#">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-4.png" width="160" height="160" alt="Фитнесс-браслеты">
           <h4>Фитнесс-браслеты</h4>
         </a>
-        <a class="catalogue-division" href="#">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-5.png" width="160" height="160" alt="Умные часы">
           <h4>Умные часы</h4>
         </a>
-        <a class="catalogue-division" href="#">
+        <a class="index-catalog-division" href="#">
           <img src="img/product-type-6.png" width="160" height="160" alt="Квадрокоптеры">
           <h4>Квадрокоптеры</h4>
         </a>
@@ -217,18 +219,24 @@
           <div class="index-services-inner">
               <div class="index-services-slides">
                   <article>
-                    <h2>Доставка</h2>
-                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    <div>
+                      <h2>Доставка</h2>
+                      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    </div>
                     <img src="img/services-delivery.png" width="180" height="196" alt="Доставка">
                   </article>
                   <article>
-                    <h2>Гарантия</h2>
-                    <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживате, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                    <div>
+                      <h2>Гарантия</h2>
+                      <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживате, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                    </div>
                     <img src="img/services-warranty.png" width="180" height="196" alt="Гарантия">
                   </article>
                   <article>
-                    <h2>Кредит</h2>
-                    <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                    <div>
+                      <h2>Кредит</h2>
+                      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                    </div>
                     <img src="img/services-credit.png" width="180" height="196" alt="Кредит">
                   </article>
               </div>
@@ -252,9 +260,9 @@
         </a>
       </section>
 
-      <div class="container">
+      <div class="index-info container">
         <!--Секция информации-->
-        <section class="index-about content-left">
+        <section class="index-about">
           <!--полоса через псевдоэлемент-->
           <h2 class="index-about-title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -267,7 +275,7 @@
           <a class="btn" href="#">Подробнее о нас</a>
         </section>
 
-        <section class="index-contacts content-right">
+        <section class="index-contacts">
           <!--полоса через псевдоэлемент-->
           <h2 class="index-contacts-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
@@ -288,37 +296,37 @@
     <footer class="main-footer">
       <div class="container">
 
-        <div class="column-left">
-          <a class="footer-logo" href="index.html">
+        <div class="content-line">
+          <a class="logo" href="index.html">
             <img src="img/logo-light.svg" width="164" height="36" alt="Магазин «Device»">
           </a>
-          <section class="footer-address">
-            г. Москва, ул. Строителей, 15
-          </section>
-          <!--полоса через псевдоэлемент-->
-        </div>
-
-        <div class="column-center">
-          <section class="footer-services">
-            <a class="delivery" href="#">Доставка</a>
-            <a class="warranty" href="#">Гарантия</a>
-            <a class="contacts" href="#">Контакты</a>
-          </section>
-          <section class="footer-social"><!--3 по 38*38-->
-            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-            <a class="social-btn social-btn-twit" href="#">Твиттер</a>
-          </section>
-        </div>
-
-        <div class="column-right">
           <section class="footer-user-purchase">
             <a class="login" href="#">Войти</a>
             <a class="compare" href="#">Сравнить</a>
             <a class="cart" href="#">Корзина</a>
           </section>
+        </div>
+
+        <div class="content-line">
+          <section class="footer-address">
+            г. Москва, ул. Строителей, 15
+          </section>
+          <section class="footer-services">
+            <a class="delivery" href="#">Доставка</a>
+            <a class="warranty" href="#">Гарантия</a>
+            <a class="contacts" href="#">Контакты</a>
+          </section>
           <section class="footer-phone">
             +7(495)495-95-95
+          </section>
+        </div>
+
+        <div class="content-line">
+          <!--ВОПРОС: полоса через псевдоэлемент-->
+          <section class="footer-social"><!--3 по 38*38-->
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+            <a class="social-btn social-btn-twit" href="#">Твиттер</a>
           </section>
           <section class="footer-copyright"><!--37*24-->
             <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>

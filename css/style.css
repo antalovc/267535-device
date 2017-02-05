@@ -1,5 +1,6 @@
 /*Вопрос:Неймспейсы*/
 
+/*Basic fonts ==========================*/
 body {
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: normal;
@@ -25,6 +26,8 @@ h2 {
   letter-spacing: 0.01em;
 }
 
+
+/*Basic form sizing---------------*/
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -34,48 +37,77 @@ h2 {
   width: 100%;
 }
 
+h1 {
+  padding: 0 60px
+}
+
+.breadcrumbs {
+  padding: 0 60px;
+  list-style: none;
+}
+
+.breadcrumbs li{
+  display: inline-block;
+}
+
+/*.container-absolute {
+  width: 1160px;
+  left: 50%;
+  margin-left: -580px;
+}*/
+
+/*Header -------------------------*/
 .main-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   box-sizing: border-box; /*ВОПРОС: норм?*/
+  padding: 42px 60px;
   margin-top: 40px;
 
   background-color: #f7e296;
 }
 
-.header-logo {
+.main-header .logo {
   position: absolute;
+  top: -19px;
 }
 
-.header-line {
+.main-header .content-line {
   display: flex;
   justify-content: space-between;
-  padding: 0 60px;
+}
+
+.main-header .content-left {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.main-header .content-right {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
 }
 
 .header-tools {
-
-}
- 
-.header-navigation {
-
+  margin-bottom: 42px;
 }
 
-.header-bottom {
+.header-catalog-contents {
+  /*Вопрос: относительно кого лучше ?*/
+  position: absolute;
+  top: 160px;
+  right: 0;
+  left: 0;
+  padding: 0 60px;
+  z-index: 100;
 
-}
-
-.content-left {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
-
-}
-
-.content-right {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
+  display: none;
+  
+  background-color: #f7e296;
+  /*TODO : diagonal items*/
 }
 
 .header-tools .login {
@@ -86,8 +118,56 @@ h2 {
   margin-left: auto;
 }
 
+/*Footer--------------------------*/
+.main-footer {
+  padding: 64px 0;
+  background-color: #464646;
+}
 
-/*==========================*/
+.main-footer .content-line{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.popup-contact {
+  display: none;
+}
+
+.footer-phone, .footer-address {
+  /*TODO: tmp*/
+  color: white;
+}
+
+/*================================*/
+/*============INDEX===============*/
+/*================================*/
+
+/*Promo---------------------------*/
+.index-promo {
+  position: relative;/* Вопрос: так или absolute+ большой отсуп?*/
+  margin-bottom: 95px;
+}
+
+.index-promo input[type=radio] {
+    display: none;
+}
+
+.promo-controls {
+  position: absolute;
+  top: 315px; 
+  right: 84px;
+}
+
+.promo-controls label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+    border-radius: 50%;
+    border: 3px solid black;
+    cursor: pointer;
+}
 
 .promo-slides {
   width: 300%;
@@ -103,32 +183,115 @@ h2 {
   overflow: hidden;
 }
 
-/*==========================*/
+.promo-item {
+  display: flex;
+  justify-content: flex-start;
+}
 
-.index-catalogue {
+.promo-item img{
+  width: 560px;
+  height: 497px;
+}
+
+.promo-item .content-left {
+  margin-right: 40px;
+}
+
+.promo-item .content-right {
+  position: relative;
+
+  display: flex;
+  /*Вопрос: нужен ли флекс?*/
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /*Вопрос: так? 
+  ЛУчше кажется flex-start, так как позиционирование переключателей*/
+}
+
+.promo-item-count {
+  position: absolute;
+  /*TODO: temp values*/
+  top: 0px;
+  right: 60px;
+}
+
+.promo-item-title {
+  /*TODO: temp values*/
+  margin-top: 77px;
+  margin-bottom: 7px;
+}
+
+.promo-item p {
+  /*TODO: temp values*/
+  margin-bottom: 45px;
+}
+
+.promo-item .btn {
+  /*TODO: temp values*/
+  margin-bottom: 75px;
+}
+
+.promo-item-details{
+  display: flex;
+}
+
+.promo-item-details span{
+  display: block; /*Вопрос: inline-block?*/
+}
+
+/*catalog-----------------------*/
+
+.index-catalog {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  margin-bottom: 186px;
+  margin-bottom: 180px;
 }
 
-.catalogue-division img{
-  background-color: #f7e296;
+.index-catalog-division img {
+  width: 160px;
+  height: 160px;
   margin-bottom: 37px;
+  background-color: #f7e296;
 }
 
-.catalogue-division h4{
-  margin: 0;
+.index-catalog-division h4 {
+  display: block;
+  width: 160px;
+  margin: 0;/*TODO: browser padding?*/
 }
 
-/*==========================*/
+/*Services-------------------------*/
 .index-services {
   margin-bottom: 94px;
+  background-color: #e5e5e5;
+}
+
+.index-services input[type=radio] {
+    display: none;
 }
 
 .index-services-content {
   position: relative;/*Вопрос: норм?*/
+  display: flex;
+  top: -70px;
+}
+
+.index-services-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;/*Вопрос: почему ширина не работает?*/
+  padding: 79px 0;
+  /*Вопрос: как делать? граница больше фона*/
+  border-right: 7px solid black;
+}
+
+.index-services-list .btn{
+  /*TODO только для первичной разметки*/
+  min-height: 40px;
 }
 
 .index-services-slides {/*Вертикальная анимация - вертикальны скроллер?*/
@@ -136,9 +299,11 @@ h2 {
 }
 
 .index-services-slides article { /*Вопрос: норм или лучше классы для понятности?*/
-    display: flex;
-    float: left;
-    width: 860px;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width: 860px;
+  margin-left: 120px;
 }
 
 .index-services-inner {
@@ -146,8 +311,108 @@ h2 {
 }
 
 
-/*==========================*/
+/*Brands--------------------------*/
 .index-brands {
   display: flex;
   justify-content: space-between;
+}
+
+/*Info----------------------------*/
+.index-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.index-info section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+}
+
+.index-info .popup-map {
+  display: none;
+  position: absolute;
+}
+
+/*================================*/
+/*============CATALOG=============*/
+/*================================*/
+.catalog {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-left,
+.catalog-right{
+  flex-grow: 1;
+}
+
+/*---left---*/
+.catalog-left > * {
+  display: flex;
+  padding-right: 68px;
+}
+
+.catalog-left > .catalog-header {
+  width: 200px;
+  justify-content: flex-end;
+  background-color: #dcdcdc;
+}
+
+.catalog-header > h3 {
+  width: 200px;
+}
+
+.catalog-left > .catalog-filter-block {
+  width: 200px;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #efefef;
+}
+
+/*---right---*/
+.catalog-right > * {
+  width: 760px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-right > .catalog-header {
+  background-color: #efefef;
+}
+
+.catalog-sorting-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-content-block {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-content-item {
+  position: relative;
+}
+
+.catalog-content-item .btn, 
+.catalog-content-item .compare{
+  position: absolute;
+  /*TODO: temp*/
+  display: none;
+}
+
+.catalog-content-item .price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-sorting-types {
+  list-style: none;
+}
+
+.catalog-sorting-types li{
+  display: inline-block;
 }
