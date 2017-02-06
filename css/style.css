@@ -371,6 +371,7 @@ h2 {
   flex-direction: column;
   align-items: flex-end;
   background-color: #efefef;
+  flex-grow: 1;
 }
 
 .catalog-left-header > * ,
@@ -396,7 +397,7 @@ h2 {
 .catalog-right-header > *,
 .catalog-content-block > * {
   width: 760px;
-  padding-left: 73px;
+  padding-left: 72px;
   padding-right: 20px;
 }
 
@@ -404,6 +405,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-top: 70px;
 }
 
 .catalog-sorting-block {
@@ -421,6 +423,7 @@ h2 {
 
 .catalog-content-item {
   position: relative;
+  margin-bottom: 45px;
 }
 
 .catalog-content-item .btn, 
@@ -446,4 +449,7 @@ h2 {
   background-color: #efefef;
 }
 
+.catalog-pages-block > *{
+  padding: 20px 30px;
+}
 /*ВОПРОС: цвета?*/
