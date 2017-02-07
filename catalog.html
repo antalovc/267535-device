@@ -13,7 +13,7 @@
       <!--Логотип заголовка-->
       <!--позиционирование через position: relative + top, left или margin-->
       <a class="logo">
-        <img src="img/logo-dark.svg" width="164" height="36" alt="Магазин «Device»">
+        <img src="img/logo-dark.png" width="163" height="36" alt="Магазин «Device»">
       </a>
 
       <!--Верхняя строка заголовка с поиском и пользовательскими инструментами-->
@@ -34,7 +34,39 @@
       <div class="header-navigation content-line">
         <div class="content-left">
           <!--TODO плюсик-->
-          <a class="catalog"  href="#">Каталог товаров</a>
+          <a class="header-catalog"  href="#">Каталог товаров</a>
+          <ul class="header-catalog-contents">
+            <li>
+              <ul class="header-catalog-line">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="#">Фитнесс-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="header-catalog-line">
+                <li>
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="header-catalog-line">
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
         <div class="content-right">
@@ -43,33 +75,6 @@
           <a class="contacts" href="#">Контакты</a>
         </div>
       </div>
-
-      <ul class="header-catalog-contents">
-        <!--Вопрос: высота заголовка задется в том числе и списком, т е список вниутри него.
-        Как тогда задать ему z-index? Или z-index задается у скроллера? Но как писать селектор?
-        Или размещать отдельно? Отдельно от заголовка?-->
-        <!--Вопрос: стилизация переносов?
-        1.2.3/4.5/6:
-        -->
-        <li>
-          <a href="#">Виртуальная реальность</a>
-        </li>
-        <li>
-          <a href="#">Фитнесс-браслеты</a>
-        </li>
-        <li>
-          <a href="#">Квадрокоптеры</a>
-        </li>
-        <li>
-          <a href="#">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a href="#">Умные часы</a>
-        </li>
-        <li>
-          <a href="#">Экшн-камеры</a>
-        </li>
-      </ul>
 
     </header>
 
@@ -120,6 +125,7 @@
             <label for="catalog-filters-shaving">Есть</label>
             <input type="radio" name="bluetooth" id="catalog-filters-care" value="no" checked>
             <label for="catalog-filters-care">нет</label>
+            <!--Вопрос: как ее сделать?-->
             <button class="btn" type="submit">Показать</button>
           </form>
         </div>
@@ -207,7 +213,7 @@
 
         <div class="content-line">
           <a class="logo" href="index.html">
-            <img src="img/logo-light.svg" width="164" height="36" alt="Магазин «Device»">
+            <img src="img/logo-light.png" width="163" height="36" alt="Магазин «Device»">
           </a>
           <section class="footer-user-purchase">
             <a class="login" href="#">Войти</a>
@@ -231,7 +237,7 @@
         </div>
 
         <div class="content-line">
-          <!--ВОПРОС: полоса через псевдоэлемент-->
+          <!--TODO: полоса через псевдоэлемент-->
           <section class="footer-social"><!--3 по 38*38-->
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
             <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
