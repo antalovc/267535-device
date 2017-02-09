@@ -308,11 +308,29 @@ h2 {
   width: 300%;
 }
 
-.index-services-slides article { /*Вопрос: норм или лучше классы для понятности?*/
+.index-service { /*Вопрос: норм или лучше классы для понятности?*/
   float: left;
-  display: flex;
-  justify-content: flex-start;
   width: 760px;
+
+  background-repeat: no-repeat;
+  background-size: 180px 196px;
+  background-position: right 50px center;
+}
+
+.index-service p{ /*Вопрос: норм или лучше классы для понятности?*/
+  width: 460px;
+}
+
+.index-services-delivery {
+  background-image: url("../img/services-delivery.png");
+}
+
+.index-services-warranty {
+  background-image: url("../img/services-warranty.png");
+}
+
+.index-services-credit {
+  background-image: url("../img/services-credit.png");
 }
 
 /*Brands--------------------------*/

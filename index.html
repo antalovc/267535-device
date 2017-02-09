@@ -12,8 +12,7 @@
     <header class="main-header container">
 
       <!--Логотип заголовка-->
-      <!--позиционирование через position: relative + top, left или margin-->
-      <a class="logo">
+      <a class="logo"><!--TODO: change to text-->
         <img src="img/logo-dark.png" width="163" height="36" alt="Магазин «Device»">
       </a>
 
@@ -220,26 +219,17 @@
           </div>
           <div class="index-services-inner">
               <div class="index-services-slides">
-                  <article>
-                    <div>
-                      <h2>Доставка</h2>
-                      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                    </div>
-                    <img src="img/services-delivery.png" width="180" height="196" alt="Доставка">
+                  <article class="index-service index-services-delivery">
+                    <h2>Доставка</h2>
+                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                   </article>
-                  <article>
-                    <div>
-                      <h2>Гарантия</h2>
-                      <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживате, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-                    </div>
-                    <img src="img/services-warranty.png" width="180" height="196" alt="Гарантия">
+                  <article class="index-service index-services-warranty">
+                    <h2>Гарантия</h2>
+                    <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживате, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                   </article>
-                  <article>
-                    <div>
-                      <h2>Кредит</h2>
-                      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-                    </div>
-                    <img src="img/services-credit.png" width="180" height="196" alt="Кредит">
+                  <article class="index-service index-services-credit">
+                    <h2>Кредит</h2>
+                    <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                   </article>
               </div>
           </div>
@@ -283,13 +273,6 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img class="index-contacts-map" src="img/map-small.png" width="560" height="222" alt="Карта">
           <a class="btn" href="#">Напишите нам</a>
-        </section>
-
-        <section class="popup-map">
-          <img src="img/map-big.png" width="960" height="559" alt="Карта">
-          <a href="#">
-            <img src="http://placehold.it/54x54" width="54" height="54" alt="Закрыть">
-          </a>
         </section>
 
       </div>
@@ -338,7 +321,14 @@
       </div>
     </footer>
 
-    <section class="popup-contact">
+    <section class="popup popup-map">
+      <img src="img/map-big.png" width="960" height="559" alt="Карта">
+      <a href="#">
+        <img src="http://placehold.it/54x54" width="54" height="54" alt="Закрыть">
+      </a>
+    </section>
+
+    <section class="popup popup-contact">
       <form action="https://echo.htmlacademy.ru" method="post">
         <label for="popup-contact-name">Ваше имя:</label>
         <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
