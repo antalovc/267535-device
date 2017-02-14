@@ -21,6 +21,7 @@ body {
   font-size: 15px;
   line-height: 2;
   color: #464646;
+  background-color: white;
   letter-spacing: 0.01em;
 }
 
@@ -37,8 +38,7 @@ h1 {
   font-size: 47px;
   line-height: 1.2;
   color: black;
-  
-  /*TODO: strange margin*/
+  background-color: white;
 }
 
 h2 {
@@ -46,6 +46,7 @@ h2 {
   font-size: 47px;
   line-height: 1.2;
   color: black;
+  background-color: white;
 }
 
 .logo {
@@ -56,15 +57,7 @@ h2 {
   text-transform: uppercase;
 }
 
-.header-navigation {
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
-  font-size: 18px;
-  line-height: 1.2;
-  letter-spacing: 0.2em; /*Check: не подходит немного!*/
-  text-transform: uppercase;
-}
-
-/*Basic form sizing---------------*/
+/*Basic form sizing===============*/
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -86,7 +79,7 @@ h2 {
   font-size: 16px; /*TODO: CHECK*/
 }
 
-/*Header -------------------------*/
+/*Header==========================*/
 .main-header {
   display: flex;
   flex-direction: column;
@@ -96,21 +89,6 @@ h2 {
   margin-bottom: 32px;
 
   background-color: #f7e296;
-}
-
-.main-header .logo {
-  margin-top: -71px;
-  margin-bottom: 15px;
-  margin-left: -4px;
-
-  color: black;
-  background-color: transparent;
-}
-.main-header .logo:hover {
-  color: #464646;
-}
-.main-header .logo:active {
-  color: #666666;
 }
 
 .main-header a {
@@ -124,6 +102,23 @@ h2 {
   opacity: 0.3;
 }
 
+.main-header .logo {
+  margin-top: -71px;
+  margin-bottom: 15px;
+  margin-left: -4px;
+
+  color: black;
+  background-color: transparent;
+}
+.main-header .logo:hover {
+  color: #464646;
+  background-color: inherit;
+}
+.main-header .logo:active {
+  color: #666666;
+  background-color: inherit;
+}
+
 .main-header .content-line {
   display: flex;
   justify-content: space-between;
@@ -132,7 +127,7 @@ h2 {
 .main-header .content-left {
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  width: 440px;
 }
 
 .main-header .content-right {
@@ -142,38 +137,169 @@ h2 {
 }
 
 .header-tools {
-  margin-bottom: 35px;
+  margin-bottom: 39px;
+}
+
+/*Search form----------*/
+.search-form {
+  display: flex;
+  position: relative;
+}
+
+.search-form:before {
+  content: "";
+  position: absolute;
+  top: 8px; /*Check: by icon size*/
+  left: 3px;/*Check: by icon size*/
+
+  width: 18px;
+  height: 18px;
+
+  background: #f7e296 url("../img/sprite.png") no-repeat;
+  background-position: -10px -546px;
+}
+
+.search-form input {
+  flex-grow: 1;
+  padding-left: 38px;
+
+  font: inherit;
+  color:  inherit;
+  text-transform: inherit;
+
+  border: none;
+  background-color: #f7e296;
+  opacity: 0.3;
+}
+
+.search-form input:hover {
+  opacity: 0.6;
+}
+
+.search-form input:focus { /*Check: not black color*/
+  color: black;
+  background-color: inherit;
+  opacity: 1;
+}
+
+.search-form input:focus {
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.search-form button { /*Check: size changes*/
+  flex-grow: 0;
+  padding: 14px 19px;
+  display: none;
+
+  border: 2px solid black;
+  background-color: inherit;
+}
+
+.search-form input:focus + button {
+  display: block;
+}
+
+.search-form button:hover {
+  color: white;
+  background-color: black;
+}
+
+.search-form button:active {
+  color:rgba(255, 255, 255, 0.6);
+  background-color: black;
+}
+
+/*Right-side tools----------*/
+.header-tools a {
+  position: relative;
+  max-width: 80px; /*Вопрос: надо?*/
+  padding-left: 26px;
 }
 
 .header-tools .login {
   margin-right: auto;
 }
-
-.header-tools a{
-  padding-left: 28px;
+.header-tools a {
+  margin-right: 38px;
+}
+.header-tools a:last-child {
+  margin-right: 0;
 }
 
-.header-tools .compare {
+.header-tools a:before {
+  content: "";
+  position: absolute;
+  top: 8px; /*Check: by icon size*/
+  left: 0px;/*Check: by icon size*/
 
+  width: 18px;
+  height: 18px;
+
+  background: #f7e296 url("../img/sprite.png") no-repeat;
 }
 
-.header-tools .cart {
+.header-tools .login::before {
+  background-position: -10px -640px;
+}
+.header-tools .compare::before {
+  background-position: -10px -139px;
+}
+.header-tools .cart::before {
+  background-position: -10px -10px;
+}
+
+/*Navigation line----------*/
+.header-navigation {
+  margin-bottom: 9px;
+
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.2em; /*Check: не подходит немного!*/
+  text-transform: uppercase;
 }
 
 .header-navigation .content-left {
   position: relative;
 }
 
+.header-catalog {
+  position: relative;
+}
+
+.header-catalog::before,
+.header-catalog::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 230px;
+
+  width: 16px;
+  height: 2px;
+  background-color: #b8a974;
+  border-radius: 1px;
+}
+
+.header-catalog::before {
+  transform: rotate(90deg);
+}
+
+.header-catalog:hover + .header-catalog-contents{
+  display: block;
+}
+
 .header-catalog-contents {
   position: absolute;
   width: 1040px;
-  top: 50px;
+  top: 43px;
   right: 0;
   left: -60px;
+  margin: 0px;
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 30px;
-  z-index: 100;
+  padding-bottom: 34px;
+  z-index: 100; 
 
   display: none;
   list-style: none;
@@ -182,47 +308,240 @@ h2 {
 
 .header-catalog-line {
   margin: 0;
-  margin-bottom: 7px;
   padding: 0;
 
   list-style: none;
   font-size: 0;
-} 
+}
+
+.header-catalog-line:hover { /*Check: не работает, меню исчезает*/
+  display: block;
+}
 
 .header-catalog-line li{
   display: inline-block;
   vertical-align: middle;
+  width: 235px;           /*Check: Квадрокоптеры не влезают*/
 
-  font-size: 0; /*TODO: CHECK*/
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em; /*Check: не подходит немного!*/
+  text-transform: none;
 }
 
-.header-navigation .contacts {
+.header-info .contacts {
   margin-left: auto;
 }
 
-.header-index-bottom {
-  padding: 60px 0;
+.header-info a {
+  padding-right: 34px;
 }
 
-/*Footer--------------------------*/
+.header-info a:last-child {
+  padding-right: 0;
+}
+
+/*Bottom line----------*/
+.header-index-bottom {
+  padding: 25px 0;
+}
+
+.header-stripe:before {
+  margin-top: 56px;
+  width: 100px;
+  height: 7px;
+
+  content: "";
+  background-color: white;
+}
+
+/*Footer==========================*/
 .main-footer {
-  padding: 64px 0;
+  margin-left: -4px;
+  padding: 56px 0;
+  color: white;
   background-color: #464646;
 }
 
 .main-footer .content-line{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 18px;
 }
+
+.main-footer a {
+  color: white;
+  background-color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+}
+.main-footer a:hover {
+  opacity: 1;
+}
+.main-footer a:active {
+  opacity: 0.3;
+}
+
+.main-footer .logo {
+  color: #f7e184;
+  background-color: inherit;
+}
+
+.main-footer .logo:hover {
+  color: #f0c52e;
+  background-color: inherit;
+}
+
+.main-footer .logo:active {
+  color: #f0c52e;
+  background-color: inherit;
+  opacity: 0.3;
+}
+
+.footer-user-purchase a {  /*Check: не подходит немного!*/
+  position: relative;
+  max-width: 80px; /*Вопрос: надо?*/
+  padding-left: 26px;
+  padding-right: 33px;
+}
+
+.footer-user-purchase a:last-child {
+  padding-right: 0;
+}
+
+.footer-user-purchase a:before {
+  content: "";
+  position: absolute;
+  top: 3px; /*Check: by icon size*/
+  left: 0px;/*Check: by icon size*/
+
+  width: 18px;
+  height: 18px;
+
+  background: #464646 url("../img/sprite.png") no-repeat;
+}
+
+.footer-user-purchase a::before {
+  opacity: 1;
+}
+.footer-user-purchase .login::before {
+  background-position: -10px -674px;
+}
+.footer-user-purchase .compare::before {
+  background-position: -10px -173px;
+}
+.footer-user-purchase .cart::before {
+  background-position: -10px -44px;
+}
+
+.footer-user-purchase .login::before:hover {
+  background-position: -10px -708px;
+}
+.footer-user-purchase .compare::before:hover {
+  background-position: -10px -207px;
+}
+.footer-user-purchase .cart::before:hover {
+  background-position: -10px -78px;
+}
+
+.footer-user-purchase .login::before:active {
+  background-position: -10px -708px;
+}
+.footer-user-purchase .compare::before:active {
+  background-position: -10px -207px;
+}
+.footer-user-purchase .cart::before:active {
+  background-position: -10px -78px;
+}
+
+.footer-address,
+.footer-phone {
+  letter-spacing: normal;
+}
+
+.footer-services {
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-services a {
+  padding-right: 30px;
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  opacity: 1;
+}
+.footer-services a:last-child {
+  padding-right: 0px;
+}
+.footer-services a:hover {
+  opacity: 0.7;
+}
+.footer-services a:active {
+  opacity: 0.3;
+}
+
+.footer-stripe:before {
+  vertical-align: top;
+  display: inline-block; /*Check - норм для задания размеров?*/
+  width: 80px;
+  height: 7px;
+
+  content: "";
+  background-color: #f7e184;
+}
+
+.main-footer .content-line-last { /*Check: плохо задавать так размеры в последней линии - неравномерность?*/
+  margin-top: 60px;
+  margin-bottom: 14px;
+
+  font-size: 0;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+
+  vertical-align: top;
+  text-decoration: none;
+
+  background: #464646 url("../img/sprite.png") no-repeat center;
+}
+
+.social-btn-fb {
+  background-position: -10px -241px;
+}
+.social-btn-in {
+  background-position: -10px -407px;
+}
+.social-btn-tw {
+  background-position: -10px -582px;
+}
+
+.footer-copyright {
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  margin: 0 2px;
+
+  vertical-align: top;
+  text-decoration: none;
+
+  background: #464646 url("../img/sprite.png") no-repeat center;
+  background-position: -10px -299px;
+}
+
 
 .popup-contact {
   display: none;
-}
-
-.footer-phone, .footer-address {
-  /*TODO: tmp*/
-  color: white;
 }
 
 /*================================*/
@@ -448,7 +767,7 @@ h2 {
   width: 560px;
 }
 
-.index-info .popup-map {
+.popup-map {
   display: none;
   position: absolute;
 }
