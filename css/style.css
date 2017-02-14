@@ -1,6 +1,7 @@
 /*Check: promo-item-count залезает на заголовок промо*/
 /*Check: firefox fonts?*/
 /*check: реализация btn*/
+/*Check: паразитарные span'ы на всех кнопках*/
 
 /*Basic fonts ==========================*/
 /*Вопрос: все это подключать?*/
@@ -88,6 +89,7 @@ h4 {
   display: inline-block;
   position: relative;
 
+  text-align: center;
 
   background-color: transparent;
   border: none;
@@ -95,7 +97,8 @@ h4 {
 }
 .btn span {
   display: inline-block;
-  padding: 9px 42px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   position: relative;
 
@@ -103,8 +106,7 @@ h4 {
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.2em;
-  vertical-align: top;
-  text-align: center;
+  vertical-align: middle;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -758,6 +760,7 @@ h4 {
 }
 
 .promo-item .btn {
+  width: 220px;
   margin-bottom: 53px;
 }
 
@@ -799,7 +802,7 @@ h4 {
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-bottom: 180px;
+  margin-bottom: 187px;
 }
 
 .index-catalog-division img {
@@ -849,15 +852,22 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   width: 277px;/*Вопрос: почему ширина не работает?*/
-  padding: 79px 0;
+  padding: 50px 0;
   margin-right: 116px;
   /*TODO: Граница больше фона: relative и отрицательный топ не работают*/
   border-right: 7px solid black;
 }
 
+.index-services-list label {
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .index-services-list .btn{
-  /*TODO только для первичной разметки*/
-  min-height: 40px;
+  width: 160px;
 }
 
 .index-services-inner {
@@ -875,11 +885,19 @@ h4 {
 
   background-repeat: no-repeat;
   background-size: 180px 196px;
-  background-position: right 50px center;
+  background-position: right 46px top 29px;
 }
 
-.index-service p{ /*Вопрос: норм или лучше классы для понятности?*/
+.index-service h2 {
+  margin: 0;
+  margin-top: 37px ;
+  margin-bottom: 28px;
+}
+
+.index-service  p{
   width: 460px;
+
+  letter-spacing: 0.01em; /*check: letter-spacing*/
 }
 
 .index-services-delivery {
@@ -892,6 +910,40 @@ h4 {
 
 .index-services-credit {
   background-image: url("../img/services-credit.png");
+}
+
+.index-services-list div {
+  margin-bottom: 23px;
+}
+
+/*Check: ID + большая вложенность*/
+#btn-services-1:checked ~ .index-services-list label[for="btn-services-1"],
+#btn-services-2:checked ~ .index-services-list label[for="btn-services-2"],
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] {
+  color: #f7e184;
+  background-color: black;
+}
+
+#btn-services-1:checked ~ .index-services-list label[for="btn-services-1"] span,
+#btn-services-2:checked ~ .index-services-list label[for="btn-services-2"] span,
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] span {
+  opacity: 1;
+}
+
+#btn-services-1:checked ~ .index-services-list label[for="btn-services-1"]::after,
+#btn-services-2:checked ~ .index-services-list label[for="btn-services-2"]::after,
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::after {
+  background-color: black;
+}
+
+#btn-services-1:checked ~ .index-services-inner .index-services-slides { 
+  transform: translate(0);
+}
+#btn-services-2:checked ~ .index-services-inner .index-services-slides { 
+  transform: translate(-760px);
+}
+#btn-services-3:checked ~ .index-services-inner .index-services-slides { 
+  transform: translate(-1520px);
 }
 
 /*Brands--------------------------*/
