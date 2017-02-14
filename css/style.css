@@ -48,6 +48,21 @@ h2 {
   color: black;
 }
 
+.logo {
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0.01em; /*Check: не подходит немного!*/
+  text-transform: uppercase;
+}
+
+.header-navigation {
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.2em; /*Check: не подходит немного!*/
+  text-transform: uppercase;
+}
 
 /*Basic form sizing---------------*/
 .container {
@@ -56,13 +71,19 @@ h2 {
 }
 
 .breadcrumbs {
-  padding: 0 60px;
-  list-style: none;
+  margin: 0;
   margin-bottom: 45px;
+  padding: 0 60px;
+
+  list-style: none;
+  font-size: 0;
 }
 
 .breadcrumbs li{
   display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px; /*TODO: CHECK*/
 }
 
 /*Header -------------------------*/
@@ -78,8 +99,29 @@ h2 {
 }
 
 .main-header .logo {
-  margin-top: -59px;
+  margin-top: -71px;
   margin-bottom: 15px;
+  margin-left: -4px;
+
+  color: black;
+  background-color: transparent;
+}
+.main-header .logo:hover {
+  color: #464646;
+}
+.main-header .logo:active {
+  color: #666666;
+}
+
+.main-header a {
+  color: black;
+  text-decoration: none;
+}
+.main-header a:hover {
+  opacity: 0.6;
+}
+.main-header a:active {
+  opacity: 0.3;
 }
 
 .main-header .content-line {
@@ -107,6 +149,17 @@ h2 {
   margin-right: auto;
 }
 
+.header-tools a{
+  padding-left: 28px;
+}
+
+.header-tools .compare {
+
+}
+
+.header-tools .cart {
+}
+
 .header-navigation .content-left {
   position: relative;
 }
@@ -128,18 +181,23 @@ h2 {
 }
 
 .header-catalog-line {
-  list-style: none;
+  margin: 0;
   margin-bottom: 7px;
-  /*TODO: Chrome thing (everywehere really!)*/
-  padding-left: 0;
-} 
+  padding: 0;
 
-.header-navigation .contacts {
-  margin-left: auto;
-}
+  list-style: none;
+  font-size: 0;
+} 
 
 .header-catalog-line li{
   display: inline-block;
+  vertical-align: middle;
+
+  font-size: 0; /*TODO: CHECK*/
+}
+
+.header-navigation .contacts {
+  margin-left: auto;
 }
 
 .header-index-bottom {
@@ -186,6 +244,11 @@ h2 {
   position: absolute;
   top: 315px; 
   right: 84px;
+
+  /*margin: 0;
+  padding: 0;*/
+
+  font-size: 0;
 }
 
 .promo-controls label {
@@ -195,7 +258,10 @@ h2 {
   margin: 0 3px;
   border-radius: 50%;
   border: 3px solid black;
+  vertical-align: middle;
   cursor: pointer;
+
+  font-size: 16px; /*Check: НЕ надо*/
 }
 
 .promo-slides {
@@ -255,11 +321,21 @@ h2 {
   margin-bottom: 75px;
 }
 
-.promo-item-detail{
-  display: inline-block;
+.promo-item-details {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
 }
 
-.promo-item-details span{
+.promo-item-detail {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px; /*check*/ 
+}
+
+.promo-item-detail span {
   display: block; /*TODO: поменять как подойдет*/
 }
 
@@ -452,11 +528,18 @@ h2 {
 }
 
 .catalog-sorting-types {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+  font-size: 0;
 }
 
 .catalog-sorting-types li{
   display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px; /*TODO: CHECK*/
 }
 
 .catalog-content-item {
