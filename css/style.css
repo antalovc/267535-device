@@ -634,7 +634,7 @@ h4 {
   margin-right: auto;
 }
 
-.popup-close {
+.popup-close { /*Check: outline при нажатии*/
   position: absolute;
   top: 22px;
   right: 22px;
@@ -682,6 +682,7 @@ h4 {
 }
 
 .popup-map {
+  display: none;
   top: 50%;
   margin-top: -280px;
   z-index: 20;
