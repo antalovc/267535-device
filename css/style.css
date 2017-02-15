@@ -1,24 +1,27 @@
 /*Check: promo-item-count залезает на заголовок промо*/
-/*Check: firefox fonts?*/
+/*Check: firefox, IE, ...?*/
 /*check: реализация btn*/
 /*Check: паразитарные span'ы на всех кнопках*/
+/*Check: margin-bottom index-promo*/
 
 /*Basic fonts ==========================*/
-/*Вопрос: все это подключать?*/
+/*Check: не подключился шрифт*/
 @font-face {
     font-family: 'Gilroy';
-    src: local('Gilroy Light'), local('Gilroy-Light'), url('Gilroylight.woff2') format('woff2'), url('Gilroylight.woff') format('woff'), url('Gilroylight.ttf') format('truetype');
+    src: local('Gilroy Light'), local('Gilroy-Light'), url('../fonts/Gilroylight.woff2') format('woff2'), url('../fonts/Gilroylight.woff') format('woff'), url('../fonts/Gilroylight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gilroy';
-    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('Gilroyextrabold.woff2') format('woff2'), url('Gilroyextrabold.woff') format('woff'), url('Gilroyextrabold.ttf') format('truetype');
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('../fonts/Gilroyextrabold.woff2') format('woff2'), url('../fonts/Gilroyextrabold.woff') format('woff'), url('../fonts/Gilroyextrabold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -47,8 +50,11 @@ h1 {
 }
 
 h2 {
+  padding: 0;
+  margin: 0;
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 47px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: black;
@@ -59,6 +65,7 @@ h2 {
 h3 {
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
   color: black;
@@ -80,6 +87,7 @@ h4 {
 .logo {
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 48px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em; /*Check: не подходит немного!*/
   text-transform: uppercase;
@@ -104,6 +112,7 @@ h4 {
 
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
   vertical-align: middle;
@@ -195,7 +204,7 @@ h4 {
 }
 .main-header .logo:hover {
   color: #464646;
-  background-color: inherit;
+  background-color: transparent;
 }
 .main-header .logo:active {
   color: #666666;
@@ -340,6 +349,7 @@ h4 {
 
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em; /*Check: не подходит немного!*/
   text-transform: uppercase;
@@ -472,6 +482,7 @@ h4 {
 .main-footer .logo {
   color: #f7e184;
   background-color: inherit;
+  opacity: 1;
 }
 
 .main-footer .logo:hover {
@@ -487,7 +498,7 @@ h4 {
 
 .footer-user-purchase a {  /*Check: не подходит немного!*/
   position: relative;
-  max-width: 80px; /*Вопрос: надо?*/
+  max-width: 80px; /*Check: надо?*/
   padding-left: 26px;
   padding-right: 33px;
 }
@@ -557,6 +568,7 @@ h4 {
   padding-right: 30px;
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -574,8 +586,7 @@ h4 {
 }
 
 .footer-stripe:before {
-  vertical-align: top;
-  display: inline-block; /*Check - норм для задания размеров?*/
+  display: block; /*Check - норм для задания размеров?*/
   width: 80px;
   height: 7px;
 
@@ -683,19 +694,106 @@ h4 {
 
 .popup-map {
   display: none;
-  top: 50%;
   margin-top: -280px;
-  z-index: 20;
-
   width: 960px;
   height: 560px;
+  z-index: 20;
+
+  top: 50%;
 
   background: #e9e5dc url("../img/map-big.png");
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2); 
 }
 
 .popup-contact {
-  display: none;
+  /*display: none;*/
+  margin-top: -280px;
+  padding: 78px 100px;
+  width: 760px;
+  z-index: 20;
+
+  top: 50%;
+
+  background: white;
+  box-shadow: 0 20px 40px rgba(4, 6, 6, 0.75); 
+}
+
+.popup-contact form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+}
+
+.popup-contact div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-contact label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0em;
+}
+
+.popup-contact textarea {
+  flex: 1;
+}
+
+.popup-contact .btn[type="submit"] {
+  align-self: flex-start;
+  width: 200px;
+}
+
+.popup-contact input,
+.popup-contact textarea {
+  padding: 13px 18px;
+
+  font: inherit;
+  color:  inherit;
+  text-transform: inherit;
+
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(203, 203, 203, 0.5);
+  border: 3px solid rgba(203, 203, 203, 0.5);
+
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+}
+
+.popup-contact input {
+  width: 318px;
+}
+
+.popup-contact input ,
+.popup-contact textarea {
+  margin-top: 13px;
+}
+
+.popup-contact input:hover,
+.popup-contact textarea:hover {
+  background-color: rgba(203, 203, 203, 0.8); /*Check: borders?*/
+  border: 3px solid rgba(203, 203, 203, 0.8);
+}
+.popup-contact input:focus,
+.popup-contact textarea:focus {
+  color: rgba(70, 70, 70, 1);
+  background-color: white;
+  border: 3px solid rgba(203, 203, 203, 1);
+  outline: none; /*Check: ok?*/
+}
+.popup-contact input:invalid{
+  background-color: rgba(237, 181, 181, 0.5);
+  border: 3px solid rgba(237, 181, 181, 0.5);
 }
 
 /*================================*/
@@ -720,7 +818,7 @@ h4 {
 
   /*margin: 0;
   padding: 0;*/
-  z-index: 100; /*check: ok?*/
+  z-index: 15; /*check: ok?*/
 
   font-size: 0;
 }
@@ -797,12 +895,12 @@ h4 {
 
 .promo-item-count {
   position: absolute;
-  /*TODO: temp values*/
   top: -14px;
   right: 27px;
 
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 179px;
+  font-weight: 800;
   line-height: 1;
   letter-spacing: 0.01em;
   color: white;
@@ -852,10 +950,11 @@ h4 {
   font-family: "Gilroy Light", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 36px;
+  font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  display: block; /*TODO: поменять как подойдет*/
+  display: block;
 }
 
 /*catalog-----------------------*/
@@ -904,7 +1003,7 @@ h4 {
 }
 
 .index-services-content {
-  position: relative;/*TODO: проверка по другим браузерам: вроде ОК*/
+  position: relative;
   display: flex;
   top: -70px;
 }
@@ -913,16 +1012,17 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 277px;/*Вопрос: почему ширина не работает?*/
+  width: 277px;/*Check: почему ширина не работает?*/
   padding: 50px 0;
   margin-right: 116px;
-  /*TODO: Граница больше фона: relative и отрицательный топ не работают*/
+  /*Check: Граница больше фона: relative и отрицательный топ не работают*/
   border-right: 7px solid black;
 }
 
 .index-services-list label {
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -941,7 +1041,7 @@ h4 {
   width: 300%;
 }
 
-.index-service { /*Вопрос: норм или лучше классы для понятности?*/
+.index-service {
   float: left;
   width: 760px;
 
@@ -1012,6 +1112,8 @@ h4 {
 .index-brands {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 84px;
 }
 
 .index-brands a {/*Check: this way?*/
@@ -1030,19 +1132,86 @@ h4 {
 }
 
 /*Info----------------------------*/
-.index-info{
+.index-info { /*Check: Шрифт*/
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
+  margin-bottom: 83px;
+}
+
+.index-info section::before {
+  display: block;
+  width: 80px;
+  height: 7px;
+  margin-bottom: 39px;
+
+  content: "";
+  background-color: black;
+}
+
+.index-info h2 {
+  margin-bottom: 40px;
+}
+
+.index-info p {
+  margin-top: 0px;
+  margin-bottom: 33px;
 }
 
 .index-info section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 560px;
 }
 
+.index-contacts-map {
+  margin-top: 7px;
+}
+
+.index-about-partners {
+  padding: 0;
+  margin: 0;
+  margin-top: 43px;
+  margin-bottom: 43px;
+
+  list-style: none;
+
+  /*Check: font!*/
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: black;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.index-about-partners li{
+  position: relative;
+  padding-left: 33px;
+  margin-bottom: 23px;
+}
+
+.index-about-partners li:before{
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  margin: 0;
+
+  position: absolute;
+  left: 1px;
+  top: 2px;
+
+  content: "";
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.index-info .btn {
+  margin-top: auto;
+  max-width: 260px;
+}
 /*================================*/
 /*============CATALOG=============*/
 /*================================*/
@@ -1140,7 +1309,7 @@ h4 {
 .catalog-content-item .btn, 
 .catalog-content-item .compare{
   position: absolute;
-  /*TODO: temp*/
+  /*Check: temp*/
   display: none;
 }
 
@@ -1163,4 +1332,3 @@ h4 {
 .catalog-pages-block > *{
   padding: 20px 30px;
 }
-/*ВОПРОС: цвета?*/

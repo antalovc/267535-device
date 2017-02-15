@@ -34,7 +34,6 @@
       <!--Вторая строка заголовка с каталогом, условиями обслуживания и контактами-->
       <div class="header-navigation content-line">
         <div class="content-left">
-          <!--TODO плюсик-->
           <a class="header-catalog"  href="catalog.html">Каталог товаров</a>
           <ul class="header-catalog-contents">
             <li>
@@ -221,7 +220,7 @@
       <!--Секция сервисов-->
       <div class="index-services">
         <section class="index-services-content container">
-          <input type="radio" id="btn-services-1" name="services">
+          <input type="radio" id="btn-services-1" name="services" checked>
           <input type="radio" id="btn-services-2" name="services">
           <input type="radio" id="btn-services-3" name="services">
           <div class="index-services-list">
@@ -273,10 +272,9 @@
       <div class="index-info container">
         <!--Секция информации-->
         <section class="index-about">
-          <!--TODO: полоса через псевдоэлемент-->
           <h2 class="index-about-title">О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="company-name">DEVICE</span> работает со многими транспортными компаниями.</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p> <!--Check: br - ok?-->
+          <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! <span class="company-name">DEVICE</span> работает со многими транспортными компаниями.</p>
           <ul class="index-about-partners">
             <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
@@ -286,7 +284,6 @@
         </section>
 
         <section class="index-contacts">
-          <!--TODO: полоса через псевдоэлемент-->
           <h2 class="index-contacts-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img class="index-contacts-map" src="img/map-small.png" width="560" height="222" alt="Карта">
@@ -346,17 +343,22 @@
 
     <section class="popup popup-contact">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="popup-contact-name">Ваше имя:</label>
-        <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
-        <label for="popup-contact-email">Ваш e-mail:</label>
-        <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
-        <label for="popup-contact-text">Текст письма:</label>
-        <textarea id="popup-contact-text" name="text"  rows="6">В свободной форме</textarea>
+        <div> <!--Check: ok?-->
+          <label for="popup-contact-name">Ваше имя:
+            <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
+          </label>
+          <label for="popup-contact-email">Ваш e-mail:
+            <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
+          </label>
+        </div>
+        <label for="popup-contact-text">Текст письма:
+          <textarea id="popup-contact-text" name="text"  rows="7">В свободной форме</textarea>
+        </label>
         <button class="btn" type="submit"><span>Отправить</span></button>
       </form>
-      <a href="#">
-        <img src="http://placehold.it/54x54" width="54" height="54" alt="Закрыть">
-      </a>
+      <button class="popup-close" type="button" title="Закрыть">
+        Закрыть
+      </button>
     </section>
 
   </body>
