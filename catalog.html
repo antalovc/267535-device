@@ -25,7 +25,10 @@
         </form>
 
         <div class="content-right">
-          <a class="login" href="#">Войти</a>
+          <div class="login-controls">
+            <a class="user" href="#">Валентин Петухов</a>
+            <a class="logout" href="#">Выйти</a>
+          </div>
           <a class="compare" href="#">Сравнить</a>
           <a class="cart" href="#">Корзина</a>
         </div>
@@ -103,29 +106,40 @@
 
           <form class="catalog-filter-block" action="https://echo.htmlacademy.ru" method="post"><!--прижимаем вправо-->
             <h4>Стоимость</h4>
-            <div class="range"><!--через border-left/right (/псевдоэл-т/+div/box-shadow)-->
-              <div class="button">&bull;</div>
-              <span class="label">от 0</span>
-              <div class="button">&bull;</div>
-              <span class="label">до 5000</span>
+
+            <div class="filter-set range-filter"><!--через border-left/right (/псевдоэл-т/+div/box-shadow)-->
+               <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <span class="label label-min">от 0</span>
+                <div class="toggle toggle-max"></div>
+                <span class="label label-max">до 5000</span>
+              </div>
             </div>
+
             <h4>Цвет</h4>
-            <input type="checkbox" name="black" id="catalog-filters-black" checked>
-            <label for="catalog-filters-black">Черный</label>
-            <input type="checkbox" name="white" id="catalog-filters-white">
-            <label for="catalog-filters-white">Белый</label>
-            <input type="checkbox" name="blue" id="catalog-filters-blue" checked>
-            <label for="catalog-filters-blue">Синий</label>
-            <input type="checkbox" name="red" id="catalog-filters-red" checked>
-            <label for="catalog-filters-red">Красный</label>
-            <input type="checkbox" name="pink" id="catalog-filters-pink">
-            <label for="catalog-filters-pink">Розовый</label>
+            <div class="filter-set color-filter">
+              <input type="checkbox" name="black" id="catalog-filters-black" checked>
+              <label for="catalog-filters-black">Черный</label>
+              <input type="checkbox" name="white" id="catalog-filters-white">
+              <label for="catalog-filters-white">Белый</label>
+              <input type="checkbox" name="blue" id="catalog-filters-blue" checked>
+              <label for="catalog-filters-blue">Синий</label>
+              <input type="checkbox" name="red" id="catalog-filters-red" checked>
+              <label for="catalog-filters-red">Красный</label>
+              <input type="checkbox" name="pink" id="catalog-filters-pink">
+              <label for="catalog-filters-pink">Розовый</label>
+            </div>
+
             <h4>Bluetooth</h4>
-            <input type="radio" name="bluetooth" id="catalog-filters-shaving" value="yes">
-            <label for="catalog-filters-shaving">Есть</label>
-            <input type="radio" name="bluetooth" id="catalog-filters-care" value="no" checked>
-            <label for="catalog-filters-care">нет</label>
-            <!--Check: как ее сделать?-->
+            <div class="filter-set bluetooth-filter">
+              <input type="radio" name="bluetooth" id="catalog-filters-shaving" value="yes">
+              <label for="catalog-filters-shaving">Есть</label>
+              <input type="radio" name="bluetooth" id="catalog-filters-care" value="no" checked>
+              <label for="catalog-filters-care">Нет</label>
+            </div>
             <button class="btn" type="submit"><span>Показать</span></button>
           </form>
         </div>
@@ -216,7 +230,7 @@
             Device
           </a>
           <section class="footer-user-purchase">
-            <a class="login" href="#">Войти</a>
+            <a class="logout" href="#">Выйти</a>
             <a class="compare" href="#">Сравнить</a>
             <a class="cart" href="#">Корзина</a>
           </section>
