@@ -7,23 +7,21 @@
 /*Basic fonts ==========================*/
 /*Check: не подключился шрифт*/
 @font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy Light'), local('Gilroy-Light'), url('../fonts/Gilroylight.woff2') format('woff2'), url('../fonts/Gilroylight.woff') format('woff'), url('../fonts/Gilroylight.ttf') format('truetype');
+    font-family: "Gilroy";
+    src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroylight.woff2") format("woff2"), url("../fonts/Gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Gilroy';
-    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('../fonts/Gilroyextrabold.woff2') format('woff2'), url('../fonts/Gilroyextrabold.woff') format('woff'), url('../fonts/Gilroyextrabold.ttf') format('truetype');
+    font-family: "Gilroy";
+    src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"), url("../fonts/Gilroyextrabold.woff2") format("woff2"), url("../fonts/Gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Open Sans", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 15px;
   line-height: 2;
   letter-spacing: 0.01em;
@@ -41,8 +39,8 @@ h1 {
   margin: 0;
   margin-bottom: 15px;
 
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
-  font-weight: 800; /*Extra Bold*/
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-weight: 800;
   font-size: 48px;
   line-height: 1.2;
   color: black;
@@ -53,7 +51,7 @@ h1 {
 h2 {
   padding: 0;
   margin: 0;
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.2;
@@ -66,7 +64,7 @@ h2 {
 h3 {
   padding: 25px 0;
   margin: 0;
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
@@ -78,8 +76,9 @@ h3 {
 }
 
 h4 {
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: black;
@@ -88,7 +87,7 @@ h4 {
 }
 
 .logo {
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
@@ -113,7 +112,7 @@ h4 {
 
   position: relative;
 
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.2;
@@ -165,7 +164,7 @@ h4 {
   font-size: 0;
 }
 
-.breadcrumbs li{
+.breadcrumbs li {
   position: relative;
 
   display: inline;
@@ -410,7 +409,7 @@ h4 {
 .header-navigation {
   margin-bottom: 9px;
 
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.2;
@@ -443,7 +442,7 @@ h4 {
   transform: rotate(90deg);
 }
 
-.header-catalog:hover + .header-catalog-contents{
+.header-catalog:hover + .header-catalog-contents {
   display: block;
 }
 
@@ -476,7 +475,7 @@ h4 {
   display: block;
 }
 
-.header-catalog-line li{
+.header-catalog-line li {
   display: inline-block;
   vertical-align: middle;
   width: 235px;           /*Check: Квадрокоптеры не влезают*/
@@ -522,7 +521,7 @@ h4 {
   background-color: #464646;
 }
 
-.main-footer .content-line{
+.main-footer .content-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -632,7 +631,7 @@ h4 {
 
 .footer-services a {
   padding-right: 30px;
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.2;
@@ -801,7 +800,7 @@ h4 {
   flex-direction: column;
   margin-bottom: 35px;
 
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1;
@@ -857,7 +856,7 @@ h4 {
   border: 3px solid rgba(203, 203, 203, 1);
   outline: none; /*Check: ok?*/
 }
-.popup-contact input:invalid{
+.popup-contact input:invalid {
   background-color: rgba(237, 181, 181, 0.5);
   border: 3px solid rgba(237, 181, 181, 0.5);
 }
@@ -879,7 +878,7 @@ h4 {
 
 .promo-controls {
   position: absolute;
-  top: 328px; 
+  bottom: 158px; 
   right: 84px;
 
   /*margin: 0;
@@ -891,10 +890,10 @@ h4 {
 
 .promo-controls label {
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   margin: 0;
-  margin-left: 22px;
+  margin-left: 23px;
   border-radius: 50%;
   border: 3px solid black;
   vertical-align: middle;
@@ -944,7 +943,7 @@ h4 {
   justify-content: flex-start;
 }
 
-.promo-item img{
+.promo-item img {
   width: 560px;
   height: 497px;
 }
@@ -964,7 +963,7 @@ h4 {
   top: -14px;
   right: 27px;
 
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 179px;
   font-weight: 800;
   line-height: 1;
@@ -1013,7 +1012,7 @@ h4 {
 .promo-item-detail span {
   margin-bottom:2px;
 
-  font-family: "Gilroy Light", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 36px;
   font-weight: 300;
@@ -1034,13 +1033,13 @@ h4 {
 
 .index-catalog-division img {
   display: block;
-  width: 160;
-  height: 160;
+  width: 160px;
+  height: 160px;
 }
 
 .index-catalog-division div {
-  width: 160;
-  height: 160;
+  width: 160px;
+  height: 160px;
   margin-bottom: 34px;
   background-color: #f7e296;
 }
@@ -1077,7 +1076,7 @@ h4 {
 .index-services-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 277px;/*Check: почему ширина не работает?*/
   padding: 50px 0;
   margin-right: 116px;
@@ -1086,7 +1085,7 @@ h4 {
 }
 
 .index-services-list label {
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.2;
@@ -1094,8 +1093,9 @@ h4 {
   text-transform: uppercase;
 }
 
-.index-services-list .btn{
+.index-services-list .btn {
   width: 160px;
+  margin-bottom: 22px;
 }
 
 .index-services-inner {
@@ -1122,7 +1122,7 @@ h4 {
   margin-bottom: 28px;
 }
 
-.index-service  p{
+.index-service  p {
   width: 460px;
 
   letter-spacing: 0.01em; /*check: letter-spacing*/
@@ -1148,14 +1148,18 @@ h4 {
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"],
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"],
 #btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] {
-  color: #f7e184;
+  width: 280px;
   background-color: black;
+  text-align: left;
 }
 
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"] span,
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"] span,
 #btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] span {
   opacity: 1;
+  color: #f7e184;
+  text-align: center;
+  width: 160px;
 }
 
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"]::after,
@@ -1182,19 +1186,20 @@ h4 {
   margin-bottom: 84px;
 }
 
-.index-brands a {/*Check: this way?*/
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  filter: grayscale(100%); 
+.index-brands .dji:hover {
+  content:url("../img/logo-brand-1-gray.png");
 }
-.index-brands a:hover {
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  filter: grayscale(0%); 
+
+.index-brands .spgadgets:hover {
+  content:url("../img/logo-brand-2-gray.png");
+}
+
+.index-brands .gopro:hover {
+  content:url("../img/logo-brand-3-gray.png");
+}
+
+.index-brands .vive:hover {
+  content:url("../img/logo-brand-4-gray.png");
 }
 
 /*Info----------------------------*/
@@ -1242,7 +1247,7 @@ h4 {
   list-style: none;
 
   /*Check: font!*/
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.2;
@@ -1252,13 +1257,13 @@ h4 {
   background-color: inherit;
 }
 
-.index-about-partners li{
+.index-about-partners li {
   position: relative;
   padding-left: 33px;
   margin-bottom: 23px;
 }
 
-.index-about-partners li::before{
+.index-about-partners li::before {
   display: inline-block;
   vertical-align: middle;
   width: 5px;
@@ -1287,7 +1292,7 @@ h4 {
 }
 
 .catalog-left,
-.catalog-right{
+.catalog-right {
   flex-grow: 1;
 }
 
@@ -1322,7 +1327,7 @@ h4 {
   margin-bottom: 25px;
 }
 
-.catalog-filter-block h4{
+.catalog-filter-block h4 {
   padding-top: 13px;
   margin-top: 0px;
   margin-bottom: 23px;
@@ -1395,7 +1400,7 @@ h4 {
   position: absolute;
   top: 24px;
 
-  font-family: "Gilroy Light", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 14px;
   font-weight: 300;
@@ -1441,7 +1446,7 @@ h4 {
   background-color: #c4c4c4;
 }
 
-.color-filter  input:checked ~ label::after,/*Check: 3 levels?, doesn't work*/
+.color-filter input:checked + label::after,/*Check: 3 levels?, doesn't work*/
 .color-filter label:active::after { 
   content: "";
   position: absolute;
@@ -1475,17 +1480,17 @@ h4 {
   border-color: #acacac;
 }
 
-.bluetooth-filter input:checked ~ label::after,/*Check: 3 levels?, doesn't work*/
+.bluetooth-filter input:checked + label::after,/*Check: 3 levels?, doesn't work*/
 .bluetooth-filter label:active::after { 
   content: "";
   position: absolute;
-  top: 2px;
-  left: 4px;
+  top: 10px;
+  left: 6px;
 
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  border-color: 2px solid black;
+  border: 2px solid black;
 }
 
 /*---right---*/
@@ -1543,12 +1548,14 @@ h4 {
 .catalog-sorting-types a:hover {
   opacity: 0.6;
 }
-.catalog-sorting-types a:active {
+.catalog-sorting-types a:active,
+.catalog-sorting-types .active {
   opacity: 1;
 }
 
 .sorting-orders a { /*Check: пятнышко*/
   position: relative;
+  display: inline-block;
   margin-left: 18px;
   width: 0; 
   height: 0; 
@@ -1556,6 +1563,8 @@ h4 {
 
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
+
+  text-decoration: none;
 
   opacity: 0.2;
 }
@@ -1607,11 +1616,11 @@ h4 {
   max-width: 360px;
 }
 
-.price-box > *{
+.price-box > * {
   margin: 0px;
 }
 
-.price-box  h4{
+.price-box  h4 {
   max-width: 260px;
 }
 
@@ -1642,7 +1651,7 @@ h4 {
   opacity: 0.2;
 }
 
-.catalog-content-item:hover img{
+.catalog-content-item:hover img {
   opacity: 0.7;
 }
 
@@ -1671,7 +1680,7 @@ h4 {
 .catalog-pages-block a,
 .catalog-pages-block span {
   text-decoration: none;
-  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 1.2;
@@ -1680,7 +1689,7 @@ h4 {
   text-transform: uppercase;
 }
 
-.catalog-pages-block > *{
+.catalog-pages-block > * {
   padding: 20px 30px;
 }
 
