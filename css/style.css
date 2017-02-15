@@ -288,14 +288,14 @@ h4 {
 .search-form::before {
   content: "";
   position: absolute;
-  top: 8px; /*Check: by icon size*/
-  left: 3px;/*Check: by icon size*/
+  top: 7px; /*Check: by icon size*/
+  left: 2px;/*Check: by icon size*/
 
   width: 18px;
   height: 18px;
 
   background: #f7e296 url("../img/sprite.png") no-repeat;
-  background-position: -10px -546px;
+  background-position: -9px -545px;
 }
 
 .search-form input {
