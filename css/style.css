@@ -39,12 +39,13 @@ img {
 h1 {
   padding: 0 60px;
   margin: 0;
+  margin-bottom: 15px;
 
+  font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
   font-weight: 800; /*Extra Bold*/
   font-size: 48px;
   line-height: 1.2;
   color: black;
-  text-transform: uppercase;
   text-decoration: none;
   background-color: white;
 }
@@ -63,8 +64,10 @@ h2 {
 }
 
 h3 {
+  padding: 25px 0;
+  margin: 0;
   font-family: "Gilroy ExtraBold", "Tahoma", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
@@ -155,7 +158,7 @@ h4 {
 
 .breadcrumbs {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 43px;
   padding: 0 60px;
 
   list-style: none;
@@ -163,10 +166,57 @@ h4 {
 }
 
 .breadcrumbs li{
-  display: inline-block;
-  vertical-align: middle;
+  position: relative;
+
+  display: inline;
+  padding-right: 25px;
 
   font-size: 16px; /*TODO: CHECK*/
+}
+
+.breadcrumbs li::before,
+.breadcrumbs li::after {
+  position: absolute;
+  content: "";
+
+  width: 5px;
+  height: 2px;
+  background-color: black;
+}
+
+.breadcrumbs li::before {
+  top: 10px;
+  right: 13px;
+  transform: rotate(45deg);
+}
+.breadcrumbs li::after {
+  top: 13px;
+  right: 13px;
+  transform: rotate(-45deg);
+}
+
+.breadcrumbs li:last-child::before,
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs li:last-child {
+  color: #000000;
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
 }
 
 /*Header==========================*/
@@ -238,7 +288,7 @@ h4 {
   position: relative;
 }
 
-.search-form:before {
+.search-form::before {
   content: "";
   position: absolute;
   top: 8px; /*Check: by icon size*/
@@ -321,7 +371,7 @@ h4 {
   margin-right: 0;
 }
 
-.header-tools a:before {
+.header-tools a::before {
   content: "";
   position: absolute;
   top: 10px; /*Check: by icon size*/
@@ -442,7 +492,7 @@ h4 {
   padding: 25px 0;
 }
 
-.header-stripe:before {
+.header-stripe::before {
   margin-top: 56px;
   width: 100px;
   height: 7px;
@@ -507,7 +557,7 @@ h4 {
   padding-right: 0;
 }
 
-.footer-user-purchase a:before {
+.footer-user-purchase a::before {
   content: "";
   position: absolute;
   top: 3px; /*Check: by icon size*/
@@ -585,7 +635,7 @@ h4 {
   opacity: 0.3;
 }
 
-.footer-stripe:before {
+.footer-stripe::before {
   display: block; /*Check - норм для задания размеров?*/
   width: 80px;
   height: 7px;
@@ -706,7 +756,7 @@ h4 {
 }
 
 .popup-contact {
-  /*display: none;*/
+  display: none;
   margin-top: -280px;
   padding: 78px 100px;
   width: 760px;
@@ -1192,7 +1242,7 @@ h4 {
   margin-bottom: 23px;
 }
 
-.index-about-partners li:before{
+.index-about-partners li::before{
   display: inline-block;
   vertical-align: middle;
   width: 5px;
@@ -1284,9 +1334,10 @@ h4 {
 .catalog-sorting-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.catalog-sorting-types {
+.catalog-sorting-types { /*Check: позиционирование через ширину?*/
   margin: 0;
   padding: 0;
 
@@ -1294,16 +1345,71 @@ h4 {
   font-size: 0;
 }
 
-.catalog-sorting-types li{
+.catalog-sorting-types li {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  margin-right: 29px;
 
   font-size: 16px; /*TODO: CHECK*/
+}
+
+.catalog-sorting-types a {
+  color: black;
+  text-decoration: none;
+  opacity: 0.3;
+
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.catalog-sorting-types a:hover {
+  opacity: 0.6;
+}
+.catalog-sorting-types a:active {
+  opacity: 1;
+}
+
+.sorting-orders a { /*Check: пятнышко*/
+  position: relative;
+  margin-left: 18px;
+  width: 0; 
+  height: 0; 
+  font-size: 0;
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  opacity: 0.2;
+}
+
+.sorting-orders .increase {
+  top: -10px;
+  border-bottom: 9px solid black;
+}
+
+.sorting-orders .decrease {
+  top: -2px;
+  border-top: 9px solid black;
+}
+
+.sorting-orders a:hover {
+  opacity: 0.4;
+}
+.sorting-orders a:active,
+.sorting-orders .active {
+  opacity: 1;
 }
 
 .catalog-content-item {
   position: relative;
   margin-bottom: 45px;
+}
+
+.catalog-content-item img {
+  width: 360px;
+  height: 380px;
+  background: ;
 }
 
 .catalog-content-item .btn, 
@@ -1316,6 +1422,7 @@ h4 {
 .catalog-content-item .price-box {
   display: flex;
   justify-content: space-between;
+  max-width: 360px;
 }
 
 .catalog-pages-block {
