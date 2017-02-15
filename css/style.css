@@ -1,11 +1,9 @@
 /*Check: promo-item-count залезает на заголовок промо*/
 /*Check: firefox, IE, ...?*/
-/*check: реализация btn*/
 /*Check: паразитарные span'ы на всех кнопках*/
 /*Check: margin-bottom index-promo*/
 
 /*Basic fonts ==========================*/
-/*Check: не подключился шрифт*/
 @font-face {
     font-family: "Gilroy";
     src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroylight.woff2") format("woff2"), url("../fonts/Gilroylight.woff") format("woff");
@@ -449,13 +447,14 @@ h4 {
 .header-catalog-contents {
   position: absolute;
   width: 1040px;
-  top: 43px;
+  top: 16px;
   right: 0;
   left: -60px;
   margin: 0px;
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 34px;
+  padding-top: 27px;
   z-index: 100; 
 
   display: none;
@@ -471,7 +470,7 @@ h4 {
   font-size: 0;
 }
 
-.header-catalog-line:hover { /*Check: не работает, меню исчезает*/
+.header-catalog-contents:hover {
   display: block;
 }
 
