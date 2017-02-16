@@ -251,7 +251,7 @@ h4 {
 
 .main-header .logo {
   margin-top: -71px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   margin-left: -4px;
 
   color: black;
@@ -289,7 +289,7 @@ h4 {
 }
 
 .header-tools {
-  margin-bottom: 35px;
+  margin-bottom: 31px;
 }
 
 /*Search form----------*/
@@ -303,7 +303,7 @@ h4 {
 .search-form::before {
   position: absolute;
   top: 15px;
-  left: 0px;
+  left: 2px;
 
   width: 18px;
   height: 18px;
@@ -412,7 +412,7 @@ h4 {
 .header-tools .compare::before,
 .header-tools .cart::before {
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: 0px;
 
   width: 18px;
@@ -476,7 +476,7 @@ h4 {
   display: block;
 }
 
-.header-catalog-contents {
+.header-catalog-contents { /*CHECK: Квадрокоптеру ылетели*/
   position: absolute;
   top: 19px;
   right: 0;
@@ -491,36 +491,39 @@ h4 {
   padding-bottom: 34px;
   padding-top: 24px;
 
+  font-size: 0;
+
   list-style: none;
   background-color: #f7e296;
-}
-
-.header-catalog-line {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-  font-size: 0;
 }
 
 .header-catalog-contents:hover {
   display: block;
 }
 
-.header-catalog-line li {
+.header-catalog-contents > li{
   display: inline-block;
-  vertical-align: middle;
-  width: 235px;           /*Check: Квадрокоптеры не влезают*/
+  vertical-align: top;
+  margin-right: 56px;
 
   font-family: "Open Sans", "Tahoma", sans-serif;
-  font-size: 15px;
   line-height: 36px;
-  letter-spacing: 0.01em; /*Check: не подходит немного!*/
+  letter-spacing: 0.01em;
   text-transform: none;
+
+  font-size: 15px;
+}
+
+.header-catalog-column {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .header-info .contacts {
   margin-left: auto;
+  margin-right: -3px;
 }
 
 .header-info a {
@@ -549,7 +552,8 @@ h4 {
 /*Footer==========================*/
 .main-footer {
   margin-left: -4px;
-  padding: 56px 0;
+  padding: 55px 0;
+  padding-bottom: 58px;
 
   color: white;
 
@@ -560,7 +564,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 13px;
 }
 
 .main-footer a {
@@ -568,13 +572,6 @@ h4 {
   text-decoration: none;
 
   background-color: inherit;
-  opacity: 0.7;
-}
-.main-footer a:hover {
-  opacity: 1;
-}
-.main-footer a:active {
-  opacity: 0.3;
 }
 
 .main-footer .logo {
@@ -583,13 +580,11 @@ h4 {
   background-color: inherit;
   opacity: 1;
 }
-
 .main-footer .logo:hover {
   color: #f0c52e;
 
   background-color: inherit;
 }
-
 .main-footer .logo:active {
   color: #f0c52e;
 
@@ -597,12 +592,28 @@ h4 {
   opacity: 0.3;
 }
 
-.footer-user-purchase a {  /*Check: не подходит немного!*/
+.footer-user-purchase{ 
+  margin-bottom: 9px;
+
+  font-size: 0px;
+}
+
+.footer-user-purchase a {
   position: relative;
 
-  max-width: 80px; /*Check: надо?*/
+  font-size: 15px;
+
+  max-width: 80px;
+  margin-left: 4px;
   padding-left: 26px;
-  padding-right: 33px;
+  padding-right: 32px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-user-purchase a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.footer-user-purchase a:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-user-purchase a:last-child {
@@ -611,8 +622,8 @@ h4 {
 
 .footer-user-purchase a::before {
   position: absolute;
-  top: 3px; /*Check: by icon size*/
-  left: 0px;/*Check: by icon size*/
+  top: 3px;
+  left: 0px;
 
   width: 18px;
   height: 18px;
@@ -620,44 +631,45 @@ h4 {
   line-height: 36px;
 
   background: #464646 url("../img/sprite.png") no-repeat;
+  opacity: 1;
 
   content: "";
 }
 
-.footer-user-purchase a::before {
-  opacity: 1;
-}
 .footer-user-purchase .login::before,
 .footer-user-purchase .logout::before {
   background-position: -10px -674px;
 }
+.footer-user-purchase .login:hover::before,
+.footer-user-purchase .logout:hover::before {
+  background-position: -10px -708px;
+}
+.footer-user-purchase .login:active::before,
+.footer-user-purchase .logout:active::before {
+  background-position: -10px -708px;
+  opacity: 0.3;
+}
+
 .footer-user-purchase .compare::before {
   background-position: -10px -173px;
 }
+.footer-user-purchase .compare:hover::before {
+  background-position: -10px -208px;
+}
+.footer-user-purchase .compare:active::before {
+  background-position: -10px -208px;
+  opacity: 0.3;
+}
+
 .footer-user-purchase .cart::before {
   background-position: -10px -44px;
 }
-
-.footer-user-purchase .login::before:hover,
-.footer-user-purchase .logout::before:hover {
-  background-position: -10px -708px;
-}
-.footer-user-purchase .compare::before:hover {
-  background-position: -10px -207px;
-}
-.footer-user-purchase .cart::before:hover {
+.footer-user-purchase .cart:hover::before {
   background-position: -10px -78px;
 }
-
-.footer-user-purchase .login::before:active,
-.footer-user-purchase .logout::before:active {
-  background-position: -10px -708px;
-}
-.footer-user-purchase .compare::before:active {
-  background-position: -10px -207px;
-}
-.footer-user-purchase .cart::before:active {
+.footer-user-purchase .cart:active::before {
   background-position: -10px -78px;
+  opacity: 0.3;
 }
 
 .footer-address,
@@ -667,12 +679,13 @@ h4 {
 
 .footer-services {
   align-self: flex-end;
-  display: flex;
-  align-items: flex-end;
+
+  margin-top: 8px;
+  margin-right: 20px;
 }
 
 .footer-services a {
-  padding-right: 30px;
+  padding-right: 35px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
@@ -687,13 +700,15 @@ h4 {
   padding-right: 0px;
 }
 .footer-services a:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .footer-services a:active {
   opacity: 0.3;
 }
 
 .footer-stripe::before {
+  margin-left: 2px;
+
   display: block; /*Check - норм для задания размеров?*/
   width: 80px;
   height: 7px;
@@ -703,11 +718,15 @@ h4 {
   content: "";
 }
 
-.main-footer .content-line-last { /*Check: плохо задавать так размеры в последней линии - неравномерность?*/
-  margin-top: 60px;
+.main-footer .content-line:last-child { /*Check: плохо задавать так размеры в последней линии - неравномерность?*/
+  margin-top: 57px;
   margin-bottom: 6px;
 
   font-size: 0;
+}
+
+.footer-social {
+  margin-right: 35px;
 }
 
 .social-btn {
@@ -720,6 +739,13 @@ h4 {
   text-decoration: none;
 
   background: #464646 url("../img/sprite.png") no-repeat center;
+  opacity: 0.3;
+}
+.social-btn:hover {
+  opacity: 0.6;
+}
+.social-btn:active {
+  opacity: 0.1;
 }
 
 .social-btn-fb {
@@ -736,13 +762,22 @@ h4 {
   display: inline-block;
   vertical-align: top;
   width: 27px;
-  height: 34px;
+  height: 40px;
   margin: 0 2px;
+  margin-left: 0px;
 
   text-decoration: none;
 
   background: #464646 url("../img/sprite.png") no-repeat center;
-  background-position: -10px -299px;
+  background-position: -10px -296px;
+  opacity: 1;
+}
+.footer-copyright:hover {
+  background-position: -10px -350px;
+}
+.footer-copyright:active {
+  background-position: -10px -350px;
+  opacity: 0.3;
 }
 
 /*Popups--------------------*/
@@ -925,7 +960,7 @@ h4 {
 
 .promo-controls {
   position: absolute;
-  bottom: 158px; 
+  bottom: 159px; 
   right: 84px;
 
   z-index: 15;
@@ -935,7 +970,7 @@ h4 {
 
 .promo-controls label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 4px;
   height: 4px;
   margin: 0;
@@ -992,7 +1027,7 @@ h4 {
 }
 
 .promo-item .content-left {
-  margin-right: 40px;
+  margin-right: 36px;
 }
 
 .promo-item .content-right {
@@ -1004,7 +1039,7 @@ h4 {
 .promo-item-count {
   position: absolute;
   top: -14px;
-  right: 27px;
+  right: 26px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 179px;
@@ -1024,18 +1059,21 @@ h4 {
 }
 
 .promo-item p {
-  max-width: 481px; /*Check: так или через br?*/
+  max-width: 481px;
   margin: 0px;
-  margin-bottom: 44px;
+  margin-bottom: 43px;
+  margin-left: 3px;
 }
 
 .promo-item .btn {
   width: 220px;
-  margin-bottom: 53px;
+  margin-bottom: 52px;
+  margin-left: 4px;
 }
 
 .promo-item-details {
   margin: 0;
+  margin-left: 3px;
   padding: 0;
 
   font-size: 0;
@@ -1070,7 +1108,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 187px;
+  margin-bottom: 170px;
 }
 
 .index-catalog-division {
@@ -1086,7 +1124,7 @@ h4 {
 .index-catalog-division div {
   width: 160px;
   height: 160px;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 
   background-color: #f7e296;
 }
@@ -1203,29 +1241,33 @@ h4 {
   margin-bottom: 23px;
 }
 
-/*Check: ID + большая вложенность*/
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"],
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"],
-#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] {
-  background-color: black;
-}
-
-#btn-services-1:checked ~ .index-services-list label[for="btn-services-1"] span,
-#btn-services-2:checked ~ .index-services-list label[for="btn-services-2"] span,
-#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"] span {
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"],
+#btn-services-1:active ~ .index-services-list label[for="btn-services-1"],
+#btn-services-2:active ~ .index-services-list label[for="btn-services-2"],
+#btn-services-3:active ~ .index-services-list label[for="btn-services-3"] {
   opacity: 1;
   color: #f7e184;
+
+  background-color: black;
 }
 
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"]::after,
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"]::after,
-#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::after {
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::after,
+#btn-services-1:active ~ .index-services-list label[for="btn-services-1"]::after,
+#btn-services-2:active ~ .index-services-list label[for="btn-services-2"]::after,
+#btn-services-3:active ~ .index-services-list label[for="btn-services-3"]::after {
   background-color: black;
 }
 
 #btn-services-1:checked ~ .index-services-list label[for="btn-services-1"]::before,
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"]::before,
-#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::before {
+#btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::before,
+#btn-services-1:active ~ .index-services-list label[for="btn-services-1"]::before,
+#btn-services-2:active ~ .index-services-list label[for="btn-services-2"]::before,
+#btn-services-3:active ~ .index-services-list label[for="btn-services-3"]::before {
   position: absolute;
 
   width: 120px;
@@ -1253,7 +1295,7 @@ h4 {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 94px;
+  margin-bottom: 93px;
 }
 
 .index-brands a {
@@ -1271,10 +1313,10 @@ h4 {
   background-position: -5px -5px;
 }
 .index-brands .spgadgets {
-  background-position: -5px -225px;
+  background-position: -5px -445px;
 }
 .index-brands .gopro {
-  background-position: -5px -445px;
+  background-position: -5px -225px;
 }
 .index-brands .vive {
   background-position: -5px -665px;
@@ -1288,10 +1330,10 @@ h4 {
   background-position: -5px -115px;
 }
 .index-brands .spgadgets:hover {
-  background-position: -5px -335px;
+  background-position: -5px -555px;
 }
 .index-brands .gopro:hover {
-  background-position: -5px -555px;
+  background-position: -5px -335px;
 }
 .index-brands .vive:hover {
   background-position: -5px -775px;
@@ -1301,14 +1343,14 @@ h4 {
 .index-info { /*Check: Шрифт*/
   display: flex;
   justify-content: space-between;
-  margin-bottom: 83px;
+  margin-bottom: 81px;
 }
 
 .index-info section::before {
   display: block;
   width: 80px;
   height: 7px;
-  margin-bottom: 39px;
+  margin-bottom: 41px;
 
   background-color: black;
 
@@ -1321,7 +1363,7 @@ h4 {
 
 .index-info p {
   margin-top: 0px;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 }
 
 .index-info section {
@@ -1345,14 +1387,14 @@ h4 {
 .index-about-partners {
   padding: 0;
   margin: 0;
-  margin-top: 43px;
-  margin-bottom: 43px;
+  margin-top: 45px;
+  margin-bottom: 44px;
 
   list-style: none;
 
   /*Check: font!*/
   font-family: "Gilroy", "Tahoma", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -1366,13 +1408,13 @@ h4 {
   position: relative;
 
   padding-left: 33px;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .index-about-partners li::before {
   position: absolute;
-  left: 1px;
-  top: 2px;
+  left: 0px;
+  top: 5px;
 
   display: inline-block;
   vertical-align: middle;
