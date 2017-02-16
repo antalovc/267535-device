@@ -1781,6 +1781,32 @@ h4 {
   margin-bottom: 50px;
 }
 
+.catalog-content-new::before {
+  position: absolute;
+  top: 29px;
+  right: 27px;
+
+  height: 56px;
+  width: 56px;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 58px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  text-indent: 4px;
+  vertical-align: middle;
+
+  border: 2px solid black;
+  border-radius: 50%;
+  opacity: 0.1;
+  
+  content: "New";
+}
+
 .catalog-content-item img {
   width: 360px;
   height: 380px;
