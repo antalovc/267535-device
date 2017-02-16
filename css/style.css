@@ -236,10 +236,10 @@ h4 {
 }
 
 .main-header a {
+  vertical-align: top;
+
   color: black;
   text-decoration: none;
-
-  vertical-align: top;
 }
 .main-header a:hover {
   opacity: 0.6;
@@ -254,17 +254,20 @@ h4 {
   margin-left: -4px;
 
   color: black;
+
   background-color: transparent;
 }
 .main-header .logo:hover {
   color: #464646;
-  opacity: 1;
+
   background-color: transparent;
+  opacity: 1;
 }
 .main-header .logo:active {
   color: #666666;
-  opacity: 1;
+
   background-color: transparent;
+  opacity: 1;
 }
 
 .main-header .content-line {
@@ -297,16 +300,17 @@ h4 {
 }
 
 .search-form::before {
-  content: "";
   position: absolute;
-  top: 15px; /*Check: by icon size*/
-  left: 0px;/*Check: by icon size*/
+  top: 15px;
+  left: 0px;
 
   width: 18px;
   height: 18px;
 
   background: #f7e296 url("../img/sprite.png") no-repeat;
   background-position: -9px -545px;
+
+  content: "";
 }
 
 .search-form input {
@@ -332,6 +336,7 @@ h4 {
 
 .search-form input:focus { /*Check: not black color*/
   color: black;
+
   background-color: inherit;
   opacity: 1;
   border-bottom: 2px solid black;
@@ -339,9 +344,9 @@ h4 {
 }
 
 .search-form button { /*Check: size changes*/
+  display: none;
   flex-grow: 0;
   padding: 7px 18px;
-  display: none;
 
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-weight: 300;
@@ -349,8 +354,8 @@ h4 {
   line-height: 2;
   letter-spacing: 0.01em;
   color: #464646;
-  background-color: white;
 
+  background-color: white;
   border: 2px solid black;
   background-color: inherit;
 }
@@ -361,17 +366,20 @@ h4 {
 
 .search-form button:hover {
   color: white;
+
   background-color: black;
 }
 
 .search-form button:active {
   color:rgba(255, 255, 255, 0.6);
+
   background-color: black;
 }
 
 /*Right-side tools----------*/
 .header-tools a {/*Check: не получается выровнять вертикально*/
   position: relative;
+
   max-width: 80px; /*Check: надо?*/
   padding-left: 26px;
 
@@ -384,6 +392,7 @@ h4 {
 
 .header-tools .login-controls {
   position: relative;
+
   margin-right: auto;
 }
 
@@ -402,15 +411,16 @@ h4 {
 .header-tools .login-controls::before,
 .header-tools .compare::before,
 .header-tools .cart::before {
-  content: "";
   position: absolute;
-  top: 10px; /*Check: by icon size*/
-  left: 0px;/*Check: by icon size*/
+  top: 10px;
+  left: 0px;
 
   width: 18px;
   height: 18px;
 
   background: #f7e296 url("../img/sprite.png") no-repeat;
+
+  content: "";
 }
 
 .header-tools .login-controls::before {
@@ -445,15 +455,17 @@ h4 {
 
 .header-catalog::before,
 .header-catalog::after {
-  content: "";
   position: absolute;
   top: 9px;
   left: 230px;
 
   width: 16px;
   height: 2px;
+
   background-color: #b8a974;
   border-radius: 1px;
+
+  content: "";
 }
 
 .header-catalog::before {
@@ -466,18 +478,19 @@ h4 {
 
 .header-catalog-contents {
   position: absolute;
-  width: 1040px;
   top: 16px;
   right: 0;
   left: -60px;
+  z-index: 10; 
+
+  display: none;
+  width: 1040px;
   margin: 0px;
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 34px;
   padding-top: 27px;
-  z-index: 10; 
 
-  display: none;
   list-style: none;
   background-color: #f7e296;
 }
@@ -528,8 +541,9 @@ h4 {
   width: 100px;
   height: 7px;
 
-  content: "";
   background-color: white;
+
+  content: "";
 }
 
 /*Footer==========================*/
