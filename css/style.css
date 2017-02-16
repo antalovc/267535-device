@@ -874,6 +874,7 @@ h4 {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.01em;
+  text-transform: none;
   color: rgba(70, 70, 70, 0.4);
 
   background-color: rgba(203, 203, 203, 0.5);
