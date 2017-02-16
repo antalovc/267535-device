@@ -790,9 +790,13 @@ h4 {
   margin-right: auto;
 }
 
+.popup-hidden {
+  display: none;
+}
+
 .popup-close { /*Check: outline при нажатии*/
   position: absolute;
-  top: 22px;
+  top: 20px;
   right: 22px;
 
   width: 55px;
@@ -843,7 +847,6 @@ h4 {
   top: 50%;
   z-index: 20;
 
-  display: none;
   margin-top: -280px;
   width: 960px;
   height: 560px;
@@ -857,9 +860,8 @@ h4 {
   top: 50%;
   z-index: 20;
 
-  display: none;
   margin-top: -280px;
-  padding: 78px 100px;
+  padding: 80px 100px;
   width: 760px;
 
   background: white;
@@ -898,6 +900,8 @@ h4 {
 .popup-contact .btn[type="submit"] {
   align-self: flex-start;
   width: 200px;
+
+  margin-top: 5px;
 }
 
 .popup-contact input,
@@ -922,7 +926,7 @@ h4 {
 
 .popup-contact input ,
 .popup-contact textarea {
-  margin-top: 13px;
+  margin-top: 10px;
 }
 
 .popup-contact input:hover,
