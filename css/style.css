@@ -478,7 +478,7 @@ h4 {
 
 .header-catalog-contents {
   position: absolute;
-  top: 16px;
+  top: 19px;
   right: 0;
   left: -60px;
   z-index: 10; 
@@ -489,7 +489,7 @@ h4 {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 34px;
-  padding-top: 27px;
+  padding-top: 24px;
 
   list-style: none;
   background-color: #f7e296;
