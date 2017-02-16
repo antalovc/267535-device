@@ -251,11 +251,13 @@ h4 {
 }
 .main-header .logo:hover {
   color: #464646;
+  opacity: 1;
   background-color: transparent;
 }
 .main-header .logo:active {
   color: #666666;
-  background-color: inherit;
+  opacity: 1;
+  background-color: transparent;
 }
 
 .main-header .content-line {
@@ -319,9 +321,6 @@ h4 {
   color: black;
   background-color: inherit;
   opacity: 1;
-}
-
-.search-form input:focus {
   border-bottom: 2px solid black;
   outline: none;
 }
@@ -1064,7 +1063,7 @@ h4 {
 
 /*Services-------------------------*/
 .index-services {
-  margin-bottom: 94px;
+  margin-bottom: 78px;
   box-shadow: inset 0 15px 0 0 white,
     inset 0 -15px 0 0 white;
   background-color: #e5e5e5;
@@ -1196,23 +1195,43 @@ h4 {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 84px;
+  margin-bottom: 94px;
+}
+
+.index-brands a {
+  width: 260px;
+  height: 100px;
+
+  font-size: 0;
+  text-decoration: none;
+
+  background: transparent url("../img/sprite-brands.png") no-repeat;
+}
+
+.index-brands .dji {
+  background-position: -5px -5px;
+}
+.index-brands .spgadgets {
+  background-position: -5px -225px;
+}
+.index-brands .gopro {
+  background-position: -5px -445px;
+}
+.index-brands .vive {
+  background-position: -5px -665px;
 }
 
 .index-brands .dji:hover {
-  content:url("../img/logo-brand-1-gray.png");
+  background-position: -5px -115px;
 }
-
 .index-brands .spgadgets:hover {
-  content:url("../img/logo-brand-2-gray.png");
+  background-position: -5px -335px;
 }
-
 .index-brands .gopro:hover {
-  content:url("../img/logo-brand-3-gray.png");
+  background-position: -5px -555px;
 }
-
 .index-brands .vive:hover {
-  content:url("../img/logo-brand-4-gray.png");
+  background-position: -5px -775px;
 }
 
 /*Info----------------------------*/
