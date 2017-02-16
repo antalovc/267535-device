@@ -928,9 +928,7 @@ h4 {
   bottom: 158px; 
   right: 84px;
 
-  /*margin: 0;
-  padding: 0;*/
-  z-index: 15; /*check: ok?*/
+  z-index: 15;
 
   font-size: 0;
 }
@@ -943,13 +941,12 @@ h4 {
   margin: 0;
   margin-left: 23px;
   border-radius: 50%;
+
   border: 3px solid black;
   cursor: pointer;
-
-  font-size: 16px; /*Check: НЕ надо*/
-
   opacity: 0.3;
 }
+
 .promo-controls label:hover {
   opacity: 0.4;
 }
@@ -1015,11 +1012,13 @@ h4 {
   line-height: 1;
   letter-spacing: 0.01em;
   color: white;
+
   background-color: inherit;
 }
 
 .promo-item-title {
   position: relative;
+
   margin-top: 79px;
   margin-bottom: 19px;
 }
@@ -1044,9 +1043,8 @@ h4 {
 
 .promo-item-detail {
   display: inline-block;
-  margin-right: 77px;
-
   vertical-align: middle;
+  margin-right: 77px;
 
   font-size: 16px;
 }
@@ -1056,6 +1054,7 @@ h4 {
 }
 
 .promo-item-detail span {
+  display: block;
   margin-bottom:2px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
@@ -1064,8 +1063,6 @@ h4 {
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: 0.01em;
-
-  display: block;
 }
 
 /*catalog-----------------------*/
@@ -1073,7 +1070,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   margin-bottom: 187px;
 }
 
@@ -1091,11 +1087,14 @@ h4 {
   width: 160px;
   height: 160px;
   margin-bottom: 34px;
+
   background-color: #f7e296;
 }
+
 .index-catalog-division:hover div {
   background-color: #f0c52e;
 }
+
 .index-catalog-division:active img,
 .index-catalog-division:active h4 {
   opacity: 0.3;
@@ -1110,9 +1109,10 @@ h4 {
 /*Services-------------------------*/
 .index-services {
   margin-bottom: 78px;
+
+  background-color: #e5e5e5;
   box-shadow: inset 0 15px 0 0 white,
     inset 0 -15px 0 0 white;
-  background-color: #e5e5e5;
 }
 
 .index-services input[type=radio] {
@@ -1121,8 +1121,9 @@ h4 {
 
 .index-services-content {
   position: relative;
-  display: flex;
   top: -85px;
+
+  display: flex;
 }
 
 .index-services-list {
@@ -1133,7 +1134,7 @@ h4 {
   padding-top: 80px;
   padding-bottom: 70px;
   margin-right: 116px;
-  /*Check: Граница больше фона: relative и отрицательный топ не работают*/
+
   border-right: 7px solid black;
 }
 
@@ -1156,11 +1157,11 @@ h4 {
 }
 
 .index-services-inner {
-  overflow: hidden;
   width: 760px;
+  overflow: hidden;
 }
 
-.index-services-slides {/*Вертикальная анимация - вертикальный скроллер?*/
+.index-services-slides {
   width: 300%;
 }
 
@@ -1226,12 +1227,15 @@ h4 {
 #btn-services-2:checked ~ .index-services-list label[for="btn-services-2"]::before,
 #btn-services-3:checked ~ .index-services-list label[for="btn-services-3"]::before {
   position: absolute;
-  content: "";
+
   width: 120px;
   height: 41px;
   left: 160px;
   top: 0;
+
   background-color: black;
+
+  content: "";
 }
 
 #btn-services-1:checked ~ .index-services-inner .index-services-slides { 
@@ -1306,8 +1310,9 @@ h4 {
   height: 7px;
   margin-bottom: 39px;
 
-  content: "";
   background-color: black;
+
+  content: "";
 }
 
 .index-info h2 {
@@ -1351,37 +1356,41 @@ h4 {
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  color: black;
   text-decoration: none;
+  color: black;
+
   background-color: inherit;
 }
 
 .index-about-partners li {
   position: relative;
+
   padding-left: 33px;
   margin-bottom: 23px;
 }
 
 .index-about-partners li::before {
+  position: absolute;
+  left: 1px;
+  top: 2px;
+
   display: inline-block;
   vertical-align: middle;
   width: 5px;
   height: 5px;
   margin: 0;
 
-  position: absolute;
-  left: 1px;
-  top: 2px;
-
-  content: "";
   border-radius: 50%;
   border: 3px solid black;
+
+  content: "";
 }
 
 .index-info .btn {
-  margin-top: auto;
   max-width: 260px;
+  margin-top: auto;
 }
+
 /*================================*/
 /*============CATALOG=============*/
 /*================================*/
