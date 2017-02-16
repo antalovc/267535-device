@@ -23,6 +23,7 @@ body {
   font-size: 15px;
   line-height: 2;
   letter-spacing: 0.01em;
+
   color: #464646;
   background-color: white;
 }
@@ -41,35 +42,40 @@ h1 {
   font-weight: 800;
   font-size: 48px;
   line-height: 1.2;
-  color: black;
   text-decoration: none;
+  color: black;
+
   background-color: white;
 }
 
 h2 {
   padding: 0;
   margin: 0;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  color: black;
   text-decoration: none;
+  color: black;
+
   background-color: inherit;
 }
 
 h3 {
   padding: 25px 0;
   margin: 0;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.2em;
-  color: black;
   text-transform: uppercase;
   text-decoration: none;
+  color: black;
+
   background-color: inherit;
 }
 
@@ -79,8 +85,9 @@ h4 {
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  color: black;
   text-decoration: none;
+  color: black;
+
   background-color: inherit;
 }
 
@@ -94,12 +101,14 @@ h4 {
 }
 
 .btn {
-  display: inline-block;
   position: relative;
+  z-index: 10;
 
-  text-align: center;
+  display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  text-align: center;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
@@ -107,14 +116,13 @@ h4 {
   line-height: 1.2;
   letter-spacing: 0.2em;
   vertical-align: middle;
-  color: black;
   text-transform: uppercase;
   text-decoration: none;
+  color: black;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
-  z-index: 10;
 }
 .btn::after {
   position: absolute;
@@ -127,6 +135,7 @@ h4 {
   margin-top: -4px;
 
   background-color: #f0c52e;
+
   content: "";
 }
 .btn:hover::after,
@@ -134,8 +143,8 @@ h4 {
   top: 0;
   bottom: 0;
 
-  margin-top: 0;
   height: 100%;
+  margin-top: 0;
 }
 .btn:active {
   outline: none;
@@ -153,8 +162,8 @@ h4 {
   margin-bottom: 43px;
   padding: 0 60px;
 
-  list-style: none;
   font-size: 0;
+  list-style: none;
 }
 
 .breadcrumbs li {
@@ -169,11 +178,13 @@ h4 {
 .breadcrumbs li::before,
 .breadcrumbs li::after {
   position: absolute;
-  content: "";
 
   width: 5px;
   height: 2px;
+
   background-color: black;
+
+  content: "";
 }
 
 .breadcrumbs li::before {
@@ -199,6 +210,7 @@ h4 {
 .breadcrumbs a,
 .breadcrumbs li:last-child {
   color: #000000;
+
   background-color: transparent;
   opacity: 0.3;
 }
