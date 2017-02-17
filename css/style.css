@@ -433,11 +433,11 @@ h4 {
   margin-right: 0;
 }
 
-.header-tools .login-controls::before,
+.header-tools .login::before,
+.header-tools .user::before,
 .header-tools .compare::before,
 .header-tools .cart::before {
   position: absolute;
-  top: 11px;
   left: 0;
 
   width: 18px;
@@ -448,13 +448,19 @@ h4 {
   content: "";
 }
 
-.header-tools .login-controls::before {
+.header-tools .login::before,
+.header-tools .user::before {
+  top: 3px;
   background-position: -10px -640px;
 }
 .header-tools .compare::before {
+  top: 11px;
+
   background-position: -10px -139px;
 }
 .header-tools .cart::before {
+  top: 11px;
+
   background-position: -10px -10px;
 }
 
