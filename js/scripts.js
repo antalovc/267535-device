@@ -26,6 +26,7 @@ closeContact.addEventListener("click", function (event) {
 contactForm.addEventListener("submit", function(event) {
   if (!contactName.value || !contactEmail.value || !contactEmail.text) {
     event.preventDefault();
+    popupContact.classList.add("popup-error");
   }
 });
 
