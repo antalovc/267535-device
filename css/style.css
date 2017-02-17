@@ -837,11 +837,11 @@ h4 {
 
 .popup-show {
   display: block;
-  -webkit-animation: popup-animation 0.6s;
-  animation: popup-animation 0.6s;
+  -webkit-animation: popup-show 0.6s;
+  animation: popup-show 0.6s;
 }
 
-@-webkit-keyframes popup-animation {
+@-webkit-keyframes popup-show {
   0%   {
     -webkit-transform: translateY(-2000px);
             transform: translateY(-2000px);
@@ -860,7 +860,7 @@ h4 {
   }
 }
 
-@keyframes popup-animation {
+@keyframes popup-show {
   0%   {
     -webkit-transform: translateY(-2000px);
             transform: translateY(-2000px);
@@ -876,6 +876,41 @@ h4 {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+.popup-error {
+  -webkit-animation: popup-error 0.6s;
+          animation: popup-error 0.6s;
+}
+
+@-webkit-keyframes popup-error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes popup-error {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
@@ -1064,7 +1099,8 @@ h4 {
   border: 3px solid rgba(203, 203, 203, 1);
   outline: none;
 }
-.popup-contact input:invalid {
+.popup-contact input:invalid,
+.popup-contact textarea:invalid {
   background-color: rgba(237, 181, 181, 0.5);
   border: 3px solid transparent;
 }
@@ -1543,10 +1579,13 @@ h4 {
 }
 
 .index-contacts-map {
-  margin-top: 7px;
+  position:relative;
 
+  margin-top: 7px;
+}
+
+.index-map {
   border: 0;
-  cursor: pointer;
 }
 
 .index-about p {
