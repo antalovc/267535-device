@@ -72,7 +72,7 @@
           </ul>
         </div>
 
-        <div class="content-right">
+        <div class="content-right header-info">
           <a class="delivery"  href="#">Доставка</a>
           <a class="warranty"  href="#">Гарантия</a>
           <a class="contacts" href="#">Контакты</a>
@@ -135,9 +135,9 @@
 
             <h4>Bluetooth</h4>
             <div class="filter-set bluetooth-filter">
-              <input type="radio" name="bluetooth" id="catalog-filters-shaving" value="yes">
+              <input type="radio" name="bluetooth" id="catalog-filters-shaving" value="yes" checked>
               <label for="catalog-filters-shaving">Есть</label>
-              <input type="radio" name="bluetooth" id="catalog-filters-care" value="no" checked>
+              <input type="radio" name="bluetooth" id="catalog-filters-care" value="no">
               <label for="catalog-filters-care">Нет</label>
             </div>
             <button class="btn" type="submit">Показать</button>
@@ -173,9 +173,9 @@
                 <img src="img/catalog-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 <div class="price-box">
                   <h4>Любительская селфи-палка</h4>
-                  <span>500 руб.</span>
+                  <span class="price">500 руб.</span>
                 </div>
-                <div class="img-overlay"> <!--Check: OK у каждого?-->
+                <div class="img-overlay">
                   <a class="btn" href="#">В корзину</a>
                   <a class="compare" href="#">Добавить к сравнению</a>
                 </div>
@@ -184,10 +184,10 @@
               <article class="catalog-content-item">
                 <img src="img/catalog-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                 <div class="price-box">
-                  <h4>Профессиональная селфи-палка</h4>
-                  <span>1 500 руб.</span>
+                  <h4>Профессиональная<br> селфи-палка</h4>
+                  <span class="price">1 500 руб.</span>
                 </div>
-                <div class="img-overlay"> <!--Check: OK у каждого?-->
+                <div class="img-overlay">
                   <a class="btn" href="#">В корзину</a>
                   <a class="compare" href="#">Добавить к сравнению</a>
                 </div>
@@ -196,10 +196,10 @@
               <article class="catalog-content-item">
                 <img src="img/catalog-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 <div class="price-box">
-                  <h4>Непотопляемая селфи-палка</h4> <!--Check: br?-->
-                  <span>2 500 руб.</span>
+                  <h4>Непотопляемая селфи-палка</h4>
+                  <span class="price">2 500 руб.</span>
                 </div>
-                <div class="img-overlay"> <!--Check: OK у каждого?-->
+                <div class="img-overlay">
                   <a class="btn" href="#">В корзину</a>
                   <a class="compare" href="#">Добавить к сравнению</a>
                 </div>
@@ -209,9 +209,9 @@
                 <img src="img/catalog-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 <div class="price-box">
                   <h4>Селфи-палка «Следуй за мной»</h4>
-                  <span>4 900 руб.</span>
+                  <span class="price">4 900 руб.</span>
                 </div>
-                <div class="img-overlay"> <!--Check: OK у каждого?-->
+                <div class="img-overlay">
                   <a class="btn" href="#">В корзину</a>
                   <a class="compare" href="#">Добавить к сравнению</a>
                 </div>
@@ -220,9 +220,11 @@
 
             <section class="catalog-pages-block"> <!--прижимаем влево-->
               <a class="prev" href="#">Назад</a>
-              <span class="current">1</span>
-              <a href="#">2</a>
-              <a href="#">3</a>
+              <div class="catalog-pages">
+                <span class="current">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+              </div>
               <a class="next" href="#">Вперёд</a>
             </section>
           </div>
@@ -258,8 +260,8 @@
           </section>
         </div>
 
-        <div class="content-line content-line-last">
-          <div class="footer-stripe"></div> <!--Check: так?-->
+        <div class="content-line">
+          <div class="footer-stripe"></div>
           <section class="footer-social">
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
             <a class="social-btn social-btn-in" href="#">Инстаграм</a>
