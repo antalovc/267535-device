@@ -826,15 +826,17 @@ h4 {
 /*Popups--------------------*/
 .popup {
   position: fixed;
-  left: 0; 
-  right: 0; 
+  left: 0;
+  right: 0;
+
+  display: none;
 
   margin-left: auto;
   margin-right: auto;
 }
 
-.popup-hidden {
-  display: none;
+.popup-show {
+  display: block;
 }
 
 .popup-close {
@@ -896,7 +898,7 @@ h4 {
   width: 960px;
   height: 560px;
 
-  background: #e9e5dc url("../img/map-big.png");
+  background-color: #e9e9e9;
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
 }
 
@@ -1501,6 +1503,7 @@ h4 {
 
 .index-contacts-map {
   margin-top: 7px;
+  cursor: pointer;
 }
 
 .index-about p {

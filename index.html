@@ -322,22 +322,21 @@
       </div>
     </footer>
 
-    <section class="popup popup-map popup-hidden">
-      <div id="yandex-map"></div>
+    <section class="popup popup-map">
       <button class="popup-close" type="button" title="Закрыть">
         Закрыть
       </button>
     </section>
 
-    <section class="popup popup-contact popup-hidden">
+    <section class="popup popup-contact">
       <section class="popup-contact-contents">
         <form action="https://echo.htmlacademy.ru" method="post">
           <div>
             <label for="popup-contact-name">Ваше имя:
-              <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
+              <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
             </label>
             <label for="popup-contact-email">Ваш e-mail:
-              <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
+              <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа" required>
             </label>
           </div>
           <label for="popup-contact-text">Текст письма:
@@ -352,7 +351,46 @@
     </section>
 
     <script>
+      var linkContact = document.querySelector(".index-contacts .btn");
+      var popupContact = document.querySelector(".popup-contact");
+      var closeContact = popupContact.querySelector(".popup-close");
+      var contactName = popupContact.querySelector(".popup-contact-name");
 
+      var linkMap = document.querySelector(".index-contacts-map");
+      var popupMap = document.querySelector(".popup-map");
+      var closeMap = popupMap.querySelector(".popup-close");
+
+      linkContact.addEventListener("click", function(event) {
+        event.preventDefault();
+        popupContact.classList.add("popup-show");
+        contactName.focus();
+      });
+
+      closeContact.addEventListener("click", function(event) {
+        event.preventDefault();
+        popupContact.classList.remove("popup-show");
+      });
+
+      linkMap.addEventListener("click", function(event) {
+        event.preventDefault();
+        popupMap.classList.add("popup-show");
+      });
+
+      closeMap.addEventListener("click", function(event) {
+        event.preventDefault();
+        popupMap.classList.remove("popup-show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popupContact.classList.contains("popup-show")) {
+            popupContact.classList.remove("popup-show");
+          }
+          if (popupMap.classList.contains("popup-show")) {
+            popupMap.classList.remove("popup-show");
+          }
+        }
+      });
     </script>
   </body>
 </html>
