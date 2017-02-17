@@ -274,7 +274,8 @@
         <section class="index-contacts">
           <h2 class="index-contacts-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <img class="index-contacts-map" src="img/map-small.png" width="560" height="222" alt="Карта">
+          <iframe class="index-contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473663!2d37.52742931608428!3d55.68703400452982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487332932701" 
+            width="560" height="222" style="border:0" allowfullscreen></iframe>
           <a class="btn" href="#">Напишите нам</a>
         </section>
 
@@ -323,6 +324,8 @@
     </footer>
 
     <section class="popup popup-map">
+      <iframe class="index-contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473663!2d37.52742931608428!3d55.68703400452982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1487332932701" 
+        width="960" height="560" style="border:0" allowfullscreen></iframe>
       <button class="popup-close" type="button" title="Закрыть">
         Закрыть
       </button>
@@ -354,7 +357,7 @@
       var linkContact = document.querySelector(".index-contacts .btn");
       var popupContact = document.querySelector(".popup-contact");
       var closeContact = popupContact.querySelector(".popup-close");
-      var contactName = popupContact.querySelector(".popup-contact-name");
+      var contactName = popupContact.querySelector("[name=name]");
 
       var linkMap = document.querySelector(".index-contacts-map");
       var popupMap = document.querySelector(".popup-map");
