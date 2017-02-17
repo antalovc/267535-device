@@ -1277,11 +1277,11 @@ h4 {
 #btn-services-2:active ~ .index-services-list label[for="btn-services-2"]::before,
 #btn-services-3:active ~ .index-services-list label[for="btn-services-3"]::before {
   position: absolute;
+  top: 0;
+  bottom: 0;
 
   width: 120px;
-  height: 41px;
   left: 160px;
-  top: 0;
 
   background-color: black;
 
