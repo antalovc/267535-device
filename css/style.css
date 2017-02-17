@@ -900,6 +900,7 @@ h4 {
 
   background-color: #e9e9e9;
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+  border: 0px;
 }
 
 /*Contact-----*/
@@ -916,7 +917,7 @@ h4 {
   position: relative;
   padding: 80px 100px;
 
-  background: white;
+  background-color: white;
   box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
 }
 
@@ -1423,7 +1424,7 @@ h4 {
   font-size: 0;
   text-decoration: none;
 
-  background: transparent url("../img/sprite-brands.jpg") no-repeat;
+  background: gray url("../img/sprite-brands.jpg") no-repeat;
   opacity: 0.2;
 }
 
@@ -1503,6 +1504,8 @@ h4 {
 
 .index-contacts-map {
   margin-top: 7px;
+
+  border: 0;
   cursor: pointer;
 }
 
@@ -1669,14 +1672,14 @@ h4 {
   width: 196px;
   height: 2px;
 
-  background: #dbdbdb;
+  background-color: #dbdbdb;
 }
 
 .range-controls .bar {
   width: 110px;
   height: 2px;
 
-  background: #91c92f;
+  background-color: #91c92f;
 }
 
 .range-controls .toggle {
@@ -1686,7 +1689,7 @@ h4 {
   width: 10px;
   height: 10px;
 
-  background: #eeeeee;
+  background-color: #eeeeee;
   border: 2px solid black;
   border-radius: 50%;
 
@@ -1697,7 +1700,7 @@ h4 {
   width: 10px;
   height: 10px;
 
-  background: #7eae29;
+  background-color: #7eae29;
   border: 3px solid white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
 }
@@ -1722,8 +1725,8 @@ h4 {
   letter-spacing: 0em;
   color: black;
 
+  background-color: transparent;
   opacity: 0.2;
-  background: transparent;
 }
 
 .range-controls .label-max {
@@ -1918,8 +1921,10 @@ h4 {
 
 .sorting-orders a {
   position: relative;
+  top: -2px;
 
   display: inline-block;
+  vertical-align: middle;
   margin-left: 22px;
   width: 0; 
   height: 0; 
@@ -1932,14 +1937,10 @@ h4 {
 }
 
 .sorting-orders .increase {
-  top: -10px;
-
   border-bottom: 9px solid black;
 }
 
 .sorting-orders .decrease {
-  top: -2px;
-
   border-top: 9px solid black;
 }
 
@@ -2002,7 +2003,7 @@ h4 {
   width: 360px;
   height: 380px;
 
-  background: #efefef;
+  background-color: #efefef;
 }
 
 .price-box {
