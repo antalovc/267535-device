@@ -329,24 +329,26 @@
       </button>
     </section>
 
-    <section class="popup popup-contact popup-hidden">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <div>
-          <label for="popup-contact-name">Ваше имя:
-            <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
+    <section class="popup popup-contact">
+      <section class="popup-contact-contents">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label for="popup-contact-name">Ваше имя:
+              <input type="text" id="popup-contact-name" name="name" value="" placeholder="Представьтесь, пожалуйста">
+            </label>
+            <label for="popup-contact-email">Ваш e-mail:
+              <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
+            </label>
+          </div>
+          <label for="popup-contact-text">Текст письма:
+            <textarea id="popup-contact-text" name="text" rows="7" placeholder="В свободной форме"></textarea>
           </label>
-          <label for="popup-contact-email">Ваш e-mail:
-            <input type="email" id="popup-contact-email" name="email" value="" placeholder="Для отправки ответа">
-          </label>
-        </div>
-        <label for="popup-contact-text">Текст письма:
-          <textarea id="popup-contact-text" name="text" rows="7" placeholder="В свободной форме"></textarea>
-        </label>
-        <button class="btn" type="submit">Отправить</button>
-      </form>
-      <button class="popup-close" type="button" title="Закрыть">
-        Закрыть
-      </button>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+        <button class="popup-close" type="button" title="Закрыть">
+          Закрыть
+        </button>
+      </section>
     </section>
 
   </body>

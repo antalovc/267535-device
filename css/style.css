@@ -899,12 +899,29 @@ h4 {
   top: 50%;
   z-index: 20;
 
+  width: 960px;
+
   margin-top: -280px;
+}
+
+.popup-contact-contents {
+  position: relative;
   padding: 80px 100px;
-  width: 760px;
 
   background: white;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.popup-contact::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 45px;
+  bottom: 80px;
+
   box-shadow: 0 20px 40px rgba(4, 6, 6, 0.75);
+
+  content: "";
 }
 
 .popup-contact form {
